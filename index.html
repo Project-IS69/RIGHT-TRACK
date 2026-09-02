@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<!-- filepath: d:\Web IS\Is tong rod.html -->
 <html lang="th">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เข็มทิศชีวิตเรียน | ปักหมุดอนาคตที่ใช่</title>
+  <title>เลือกแผนการเรียนที่ใช่ | ถูกใจในสิ่งที่เรียน</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-padding-top: 110px;
     }
 
     body {
-      font-family: "Sarabun", sans-serif;
+      font-family: "Mali", sans-serif;
       background: #fffaf7;
-      color: #58465b;
+      color: #59475f;
     }
 
     .พื้นหลังนุ่ม {
       background:
-        radial-gradient(circle at 10% 10%, #fbdde8 0, transparent 28%),
-        radial-gradient(circle at 90% 20%, #e8def9 0, transparent 30%),
+        radial-gradient(circle at 8% 12%, #fbdce8 0, transparent 28%),
+        radial-gradient(circle at 92% 18%, #e8def9 0, transparent 30%),
         #fffaf7;
     }
 
     .เงานุ่ม {
-      box-shadow: 0 18px 45px rgba(146, 110, 145, 0.12);
+      box-shadow: 0 18px 45px rgba(132, 96, 137, 0.13);
     }
 
     .การ์ดลอย {
@@ -39,31 +39,36 @@
     }
 
     .การ์ดลอย:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(146, 110, 145, 0.2);
+      transform: translateY(-7px);
+      box-shadow: 0 22px 42px rgba(132, 96, 137, 0.22);
     }
   </style>
 </head>
 
 <body>
-  <header class="sticky top-0 z-50 border-b border-pink-100 bg-white/85 backdrop-blur-md">
+  <header class="sticky top-0 z-50 border-b border-pink-100 bg-white/90 backdrop-blur-md">
     <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4">
       <a href="#home" class="flex items-center gap-3">
         <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-300 to-purple-300 text-2xl">
           🧭
         </div>
+
         <div>
-          <div class="text-lg font-bold leading-snug text-purple-900">เข็มทิศชีวิตเรียน</div>
-          <div class="text-sm leading-[1.6] text-pink-500">ปักหมุดอนาคตที่ใช่</div>
+          <div class="text-lg font-bold leading-snug text-purple-950">
+            เลือกแผนการเรียนที่ใช่
+          </div>
+          <div class="text-sm leading-[1.6] text-pink-500">
+            ถูกใจในสิ่งที่เรียน
+          </div>
         </div>
       </a>
 
       <div class="flex flex-wrap justify-center gap-2 text-sm font-medium text-purple-900">
-        <a href="#home" class="rounded-full px-4 py-2 hover:bg-pink-100">หน้าแรก</a>
-        <a href="#about" class="rounded-full px-4 py-2 hover:bg-pink-100">เกี่ยวกับเรา</a>
-        <a href="#quiz" class="rounded-full px-4 py-2 hover:bg-pink-100">แบบทดสอบ</a>
-        <a href="#majors" class="rounded-full px-4 py-2 hover:bg-pink-100">รายละเอียดแผนการเรียน</a>
-        <a href="#feedback" class="rounded-full px-4 py-2 hover:bg-pink-100">ความคิดเห็น</a>
+        <a href="#home" class="rounded-full px-4 py-2 transition hover:bg-pink-100">หน้าแรก</a>
+        <a href="#about" class="rounded-full px-4 py-2 transition hover:bg-pink-100">เกี่ยวกับเรา</a>
+        <a href="#quiz" class="rounded-full px-4 py-2 transition hover:bg-pink-100">แบบทดสอบ</a>
+        <a href="#majors" class="rounded-full px-4 py-2 transition hover:bg-pink-100">แผนการเรียน</a>
+        <a href="#feedback" class="rounded-full px-4 py-2 transition hover:bg-pink-100">ความคิดเห็น</a>
       </div>
     </nav>
   </header>
@@ -72,12 +77,13 @@
     <section id="home" class="พื้นหลังนุ่ม">
       <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-2 lg:py-32">
         <div>
-          <div class="mb-5 inline-flex rounded-full bg-pink-100 px-4 py-2 text-sm font-medium text-pink-700">
+          <span class="mb-6 inline-flex rounded-full bg-pink-100 px-6 py-3 text-xl font-medium text-pink-700">
             พื้นที่ค้นหาความฝันของคุณ
-          </div>
+          </span>
 
-          <h1 class="max-w-2xl text-4xl font-bold leading-snug text-purple-950 sm:text-5xl">
+          <h1 class="max-w-2xl text-4xl font-bold leading-[1.8] text-purple-950 sm:text-5xl">
             ค้นหาแผนการเรียนที่ใช่
+            <br>
             <span class="text-pink-500">ในแบบของคุณ</span>
           </h1>
 
@@ -86,7 +92,8 @@
             ให้เหมาะกับเป้าหมายของคุณอย่างผ่อนคลายและมั่นใจ
           </p>
 
-          <a href="#quiz" class="mt-8 inline-flex rounded-full bg-purple-500 px-7 py-3 font-semibold text-white shadow-lg shadow-purple-200 hover:bg-purple-600">
+          <a href="#quiz"
+             class="mt-8 inline-flex rounded-full bg-purple-500 px-7 py-3 font-semibold text-white shadow-lg shadow-purple-200 transition hover:bg-purple-600">
             เริ่มค้นหาเส้นทาง
           </a>
         </div>
@@ -95,19 +102,25 @@
           <a href="#quiz" class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-100 text-2xl">💗</div>
             <h2 class="text-xl font-bold leading-snug text-purple-950">ความสนใจ</h2>
-            <p class="mt-2 leading-[1.6] text-purple-800/70">สำรวจสิ่งที่คุณชอบและเพลิดเพลินเมื่อได้ลงมือทำ</p>
+            <p class="mt-2 leading-[1.6] text-purple-800/70">
+              สำรวจสิ่งที่คุณชอบและเพลิดเพลินเมื่อได้ลงมือทำ
+            </p>
           </a>
 
           <a href="#majors" class="การ์ดลอย เงานุ่ม rounded-3xl border border-purple-100 bg-white p-6">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-100 text-2xl">🌷</div>
             <h2 class="text-xl font-bold leading-snug text-purple-950">เป้าหมาย</h2>
-            <p class="mt-2 leading-[1.6] text-purple-800/70">มองเห็นภาพอนาคตและสิ่งที่อยากเติบโตไปด้วยกัน</p>
+            <p class="mt-2 leading-[1.6] text-purple-800/70">
+              มองเห็นภาพอนาคตและสิ่งที่อยากเติบโตไปด้วยกัน
+            </p>
           </a>
 
           <a href="#quiz" class="การ์ดลอย เงานุ่ม rounded-3xl border border-yellow-100 bg-white p-6">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-yellow-100 text-2xl">✨</div>
             <h2 class="text-xl font-bold leading-snug text-purple-950">แนวทางที่เหมาะสม</h2>
-            <p class="mt-2 leading-[1.6] text-purple-800/70">ค้นพบแผนการเรียนที่เข้ากับตัวตนของคุณ</p>
+            <p class="mt-2 leading-[1.6] text-purple-800/70">
+              ค้นพบแผนการเรียนที่เข้ากับตัวตนของคุณ
+            </p>
           </a>
         </div>
       </div>
@@ -117,6 +130,7 @@
       <div class="mx-auto max-w-3xl text-center">
         <div class="mb-4 text-4xl">🌼</div>
         <h2 class="text-3xl font-bold leading-snug text-purple-950">เกี่ยวกับเรา</h2>
+
         <p class="mt-6 text-lg leading-[1.65] text-purple-800/75">
           เว็บไซต์นี้จัดทำขึ้นเพื่อช่วยให้นักเรียนได้สำรวจความสนใจ
           ความถนัด และเป้าหมายของตนเอง ก่อนตัดสินใจเลือกแผนการเรียน
@@ -128,12 +142,23 @@
     <section id="quiz" class="bg-pink-50/70 px-6 py-24">
       <div class="mx-auto max-w-5xl text-center">
         <div class="mb-4 text-4xl">📝</div>
-        <h2 class="text-3xl font-bold leading-snug text-purple-950">แบบทดสอบค้นหาแผนการเรียน</h2>
-        <p class="mt-4 leading-[1.65] text-purple-800/70">ตอบคำถามสั้น ๆ เพื่อค้นหาแนวทางที่เหมาะกับคุณ</p>
 
-        <div class="เงานุ่ม mt-10 rounded-3xl border border-pink-100 bg-white p-10">
-          <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-pink-100 text-4xl">💭</div>
-          <p class="mt-6 text-xl font-semibold text-purple-900">[ พื้นที่สำหรับใส่ระบบแบบทดสอบ ]</p>
+        <h2 class="text-3xl font-bold leading-snug text-purple-950">
+          แบบทดสอบค้นหาแผนการเรียน
+        </h2>
+
+        <p class="mt-4 leading-[1.65] text-purple-800/70">
+          ตอบคำถามสั้น ๆ เพื่อค้นหาแนวทางที่เหมาะกับคุณ
+        </p>
+
+        <div class="เงานุ่ม mt-10 rounded-3xl border border-pink-100 bg-white p-10 text-center">
+          <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-pink-100 text-4xl">
+            💭
+          </div>
+
+          <p class="mt-6 text-xl font-semibold text-purple-900">
+            [ พื้นที่สำหรับใส่ระบบแบบทดสอบ ]
+          </p>
         </div>
       </div>
     </section>
@@ -141,28 +166,48 @@
     <section id="majors" class="mx-auto max-w-7xl px-6 py-24">
       <div class="mb-10 text-center">
         <div class="mb-4 text-4xl">📚</div>
-        <h2 class="text-3xl font-bold leading-snug text-purple-950">รายละเอียดแผนการเรียน</h2>
-        <p class="mt-4 leading-[1.65] text-purple-800/70">ทำความรู้จักแต่ละแผนการเรียนและค้นหาเส้นทางของคุณ</p>
+
+        <h2 class="text-3xl font-bold leading-snug text-purple-950">
+          รายละเอียดแผนการเรียน
+        </h2>
+
+        <p class="mt-4 leading-[1.65] text-purple-800/70">
+          ทำความรู้จักแต่ละแผนการเรียนและค้นหาเส้นทางของคุณ
+        </p>
       </div>
 
       <div class="เงานุ่ม rounded-3xl border border-purple-100 bg-purple-50 p-10 text-center">
-        <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-purple-100 text-4xl">🌈</div>
-        <p class="mt-6 text-xl font-semibold text-purple-900">[ พื้นที่สำหรับใส่รายละเอียดแผนการเรียน ]</p>
+        <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-purple-100 text-4xl">
+          🌈
+        </div>
+
+        <p class="mt-6 text-xl font-semibold text-purple-900">
+          [ พื้นที่สำหรับใส่รายละเอียดแผนการเรียน ]
+        </p>
       </div>
     </section>
 
     <section id="feedback" class="bg-purple-50/70 px-6 py-24">
       <div class="mx-auto max-w-4xl text-center">
         <div class="mb-4 text-4xl">💌</div>
-        <h2 class="text-3xl font-bold leading-snug text-purple-950">ความคิดเห็นเกี่ยวกับเว็บไซต์</h2>
+
+        <h2 class="text-3xl font-bold leading-snug text-purple-950">
+          ความคิดเห็นเกี่ยวกับเว็บไซต์
+        </h2>
+
         <p class="mt-5 leading-[1.65] text-purple-800/75">
           ความคิดเห็นของคุณช่วยให้เราพัฒนาเว็บไซต์ให้เป็นประโยชน์กับนักเรียนมากยิ่งขึ้น
         </p>
 
         <div class="เงานุ่ม mt-10 rounded-3xl border border-purple-100 bg-white p-10">
-          <p class="text-xl font-semibold text-purple-900">[ พื้นที่สำหรับใส่แบบฟอร์มความคิดเห็น ]</p>
-          <a href="https://forms.google.com/" target="_blank" rel="noopener noreferrer"
-             class="mt-6 inline-flex rounded-full bg-pink-400 px-7 py-3 font-semibold text-white hover:bg-pink-500">
+          <p class="text-xl font-semibold text-purple-900">
+            [ พื้นที่สำหรับใส่แบบฟอร์มความคิดเห็น ]
+          </p>
+
+          <a href="https://forms.google.com/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="mt-6 inline-flex rounded-full bg-pink-400 px-7 py-3 font-semibold text-white transition hover:bg-pink-500">
             เปิดแบบฟอร์มความคิดเห็น
           </a>
         </div>
@@ -171,7 +216,7 @@
   </main>
 
   <footer class="bg-purple-950 px-6 py-8 text-center text-sm leading-[1.6] text-purple-100">
-    <p>เข็มทิศชีวิตเรียน — ปักหมุดอนาคตที่ใช่</p>
+    <p>เลือกแผนการเรียนที่ใช่ — ถูกใจในสิ่งที่เรียน</p>
   </footer>
 
   <script>
@@ -179,7 +224,9 @@
       ลิงก์.addEventListener("click", (เหตุการณ์) => {
         เหตุการณ์.preventDefault();
 
-        const เป้าหมาย = document.querySelector(ลิงก์.getAttribute("href"));
+        const เป้าหมาย = document.querySelector(
+          ลิงก์.getAttribute("href")
+        );
 
         if (เป้าหมาย) {
           เป้าหมาย.scrollIntoView({
