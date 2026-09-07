@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>เลือกแผนการเรียนที่ใช่ | ถูกใจในสิ่งที่เรียน</title>
 
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Google Fonts: Mali -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -46,7 +48,8 @@
 </head>
 
 <body>
-  <header class="sticky top-0 z-50 border-b border-pink-100 bg-white/90 backdrop-blur-md">
+  <!-- ==================== HEADER / NAV ==================== -->
+  <header class="sticky top-0 z-40 border-b border-pink-100 bg-white/90 backdrop-blur-md">
     <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4">
       <a href="#home" class="flex items-center gap-3">
         <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-300 to-purple-300 text-2xl">
@@ -74,6 +77,7 @@
   </header>
 
   <main>
+    <!-- ==================== SECTION: HOME ==================== -->
     <section id="home" class="พื้นหลังนุ่ม">
       <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-2 lg:py-32">
         <div>
@@ -126,6 +130,7 @@
       </div>
     </section>
 
+    <!-- ==================== SECTION: ABOUT ==================== -->
     <section id="about" class="mx-auto max-w-7xl px-6 py-24">
       <div class="mx-auto max-w-3xl text-center">
         <div class="mb-4 text-4xl">🌼</div>
@@ -139,6 +144,7 @@
       </div>
     </section>
 
+    <!-- ==================== SECTION: QUIZ ==================== -->
     <section id="quiz" class="bg-pink-50/70 px-6 py-24">
       <div class="mx-auto max-w-5xl text-center">
         <div class="mb-4 text-4xl">📝</div>
@@ -163,30 +169,298 @@
       </div>
     </section>
 
+    <!-- ==================== SECTION: MAJORS (11 แผนการเรียน) ==================== -->
     <section id="majors" class="mx-auto max-w-7xl px-6 py-24">
-      <div class="mb-10 text-center">
+      <div class="mb-12 text-center">
         <div class="mb-4 text-4xl">📚</div>
 
         <h2 class="text-3xl font-bold leading-snug text-purple-950">
-          รายละเอียดแผนการเรียน
+          รายละเอียด 11 แผนการเรียน
         </h2>
 
         <p class="mt-4 leading-[1.65] text-purple-800/70">
-          ทำความรู้จักแต่ละแผนการเรียนและค้นหาเส้นทางของคุณ
+          ทำความรู้จักแต่ละแผนการเรียน เจาะลึกรายวิชาเพื่อการวางแผนอนาคตที่แม่นยำ
         </p>
       </div>
 
-      <div class="เงานุ่ม rounded-3xl border border-purple-100 bg-purple-50 p-10 text-center">
-        <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-purple-100 text-4xl">
-          🌈
+      <!-- Grid แสดงการ์ด 11 ห้องเรียน -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- ห้อง 1 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 1</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-pink-50 text-pink-600 text-xs font-medium">ห้องเรียนพิเศษ</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">วิทย์-คณิต เทคโนโลยี สิ่งแวดล้อม และ พสวท.</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">เน้นกระบวนการวิจัย วิทยาศาสตร์เข้มข้น และโครงงานสิ่งแวดล้อมระดับสูง</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">จุดเด่น/วิชาเน้น:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">พสวท.</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">โครงงานวิจัย</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">สิ่งแวดล้อม</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <p class="mt-6 text-xl font-semibold text-purple-900">
-          [ พื้นที่สำหรับใส่รายละเอียดแผนการเรียน ]
-        </p>
+        <!-- ห้อง 2 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 2</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-600 text-xs font-medium">สู่ความเป็นเลิศ</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">วิทย์-คณิต เทคโนโลยี สิ่งแวดล้อม และ พสวท.</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">มุ่งเน้นความเป็นเลิศทางวิชาการ เตรียมพร้อมสำหรับการแข่งขันและต่อยอดในระดับอุดมศึกษา</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">จุดเด่น/วิชาเน้น:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">วิทย์-คณิตเข้มข้น</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">นวัตกรรม</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ความเป็นเลิศ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ห้อง 3 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold">ห้อง 3</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-xs font-medium">MOU ร่วมกับ มจพ.</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">นวัตกรรมและวิทยาศาสตร์ประยุกต์</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">ฝึกปฏิบัติในแล็บมหาวิทยาลัย พร้อมสิทธิ์ยื่น Portfolio เข้า มจพ. ในรอบ TCAS 1 โดยตรง</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">วิชาหลัก / โครงสร้าง:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">วิทย์-คณิตพื้นฐาน</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ปฏิบัติการนวัตกรรม</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">โครงงาน มจพ.</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h3')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- ห้อง 4 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold">ห้อง 4</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">โค้ดดิ้ง & หุ่นยนต์</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">เตรียมวิศวกรรมซอฟต์แวร์</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">ปูพื้นฐานการเขียนโปรแกรม หุ่นยนต์ และ AI ควบคู่กับวิชาวิทยาศาสตร์-คณิตศาสตร์พื้นฐาน</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">วิชาหลัก / โครงสร้าง:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">การเขียนโปรแกรม</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">หุ่นยนต์ & AI</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ฟิสิกส์-เคมี-ชีวะ</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h4')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- ห้อง 5 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 5</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-600 text-xs font-medium">แผนมาตรฐาน</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">วิทยาศาสตร์ - คณิตศาสตร์</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">แผนการเรียนมาตรฐานทองคำ รองรับการศึกษาต่อคณะทางสายแพทย์ วิศวกรรมศาสตร์ และวิทยาศาสตร์</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">จุดเด่น/วิชาเน้น:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ฟิสิกส์-เคมี-ชีวะ</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">คณิตศาสตร์เพิ่มเติม</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ห้อง 6 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">ห้อง 6</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium">บริหารจัดการ</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">โลจิสติกส์และซัพพลายเชน</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">เรียนรู้ระบบขนส่ง การจัดการคลังสินค้า และห่วงโซ่อุปทานระดับสากล</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">จุดเด่น/วิชาเน้น:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">การจัดการขนส่ง</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">คลังสินค้า</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ธุรกิจการค้า</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ห้อง 7 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold">ห้อง 7</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-sky-50 text-sky-700 text-xs font-medium">บริการ & ภาษา</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">อุตสาหกรรมการบิน</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">เรียนรู้การบริการบนเครื่องและภาคพื้น พัฒนาบุคลิกภาพ และเน้นทักษะภาษาอังกฤษ-จีน</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">วิชาหลัก / โครงสร้าง:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">พัฒนาบุคลิกภาพ</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">อังกฤษ-จีนเพื่อการสื่อสาร</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">บริการสนามบิน</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h7')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- ห้อง 8 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-xs font-bold">ห้อง 8</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-xs font-medium">วิเคราะห์ & กฎหมาย</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">เตรียมนิติศาสตร์</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">เจาะลึกกฎหมายแพ่ง-อาญา นิติปรัชญา เน้นทักษะการคิดวิเคราะห์และการเขียนบรรยายตอบข้อสอบ</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">วิชาหลัก / โครงสร้าง:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">กฎหมายแพ่ง-อาญา</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">อาชญาวิทยา</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">การเขียนวิเคราะห์</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h8')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- ห้อง 9 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold">ห้อง 9</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">ภาษา & วัฒนธรรม</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">ภาษาอังกฤษ - ภาษาญี่ปุ่น</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">ปูพื้นฐานภาษาญี่ปุ่นจากศูนย์ พร้อมกิจกรรมติวสอบวัดระดับ และค่ายภาษาจากอาจารย์เจ้าของภาษา</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">วิชาหลัก / โครงสร้าง:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ไวยากรณ์ญี่ปุ่น</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ตัวอักษร & คำศัพท์</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">อังกฤษการสื่อสาร</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h9')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- ห้อง 10 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-red-100 text-red-800 text-xs font-bold">ห้อง 10</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-red-50 text-red-700 text-xs font-medium">ภาษา & โอกาสทางธุรกิจ</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">ภาษาอังกฤษ - ภาษาจีน</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">เรียนภาษาจีนเข้มข้น 6 คาบ/สัปดาห์ ปูพื้นฐานพินอินแน่น พร้อมค่ายเรียนต่อต่างประเทศและกิจกรรมวัฒนธรรม</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">วิชาหลัก / โครงสร้าง:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">พินอิน & คำศัพท์</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">วัฒนธรรมจีน</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ทัศนศึกษาต่างประเทศ</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h10')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- ห้อง 11 -->
+        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 11</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-orange-50 text-orange-700 text-xs font-medium">ความสามารถพิเศษ</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">สปอร์ต-อาร์ต-มิวสิก (SAM)</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">ส่งเสริมและพัฒนาอัจฉริยภาพด้านกีฬา ศิลปะ และดนตรีอย่างเต็มศักยภาพ</p>
+            </div>
+            <div class="space-y-1.5 pt-1">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">จุดเด่น/วิชาเน้น:</h4>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">วิทยาศาสตร์การกีฬา</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ศิลปะประยุกต์</span>
+                <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ดนตรีและการแสดง</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
+    <!-- ==================== SECTION: FEEDBACK ==================== -->
     <section id="feedback" class="bg-purple-50/70 px-6 py-24">
       <div class="mx-auto max-w-4xl text-center">
         <div class="mb-4 text-4xl">💌</div>
@@ -215,11 +489,139 @@
     </section>
   </main>
 
+  <!-- ==================== FOOTER ==================== -->
   <footer class="bg-purple-950 px-6 py-8 text-center text-sm leading-[1.6] text-purple-100">
     <p>เลือกแผนการเรียนที่ใช่ — ถูกใจในสิ่งที่เรียน</p>
   </footer>
 
+  <!-- ==================== MODAL POPUP DETAILS ==================== -->
+  <div id="modal-container" class="fixed inset-0 bg-purple-950/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    
+    <!-- Modal: ห้อง 3 -->
+    <div id="modal-h3" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-bold">ห้อง 3</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">นวัตกรรมและวิทยาศาสตร์ประยุกต์</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> มีบันทึกข้อตกลงความร่วมมือ (MOU) กับคณะวิทยาศาสตร์ประยุกต์ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.) เปิดโอกาสให้นักเรียนได้ทำปฏิบัติการในห้องแล็บจริง และรับสิทธิ์ยื่น Portfolio เข้าศึกษาต่อในรอบ TCAS 1 โดยตรง</p>
+        <p><strong>โครงสร้างการเรียน:</strong> ใช้หลักสูตรวิทย์-คณิตมาตรฐาน เพิ่มเติมวิชาเฉพาะ 3 รหัสวิชา ได้แก่ ปฏิบัติการ นวัตกรรม และวิทยาศาสตร์ประยุกต์ 1, 2, 3 (ชั้น ม.4 - ม.5 เทอม 1) พร้อมทั้งทำโครงงานวิทยาศาสตร์เพื่อนำเสนอในระดับมหาวิทยาลัยในช่วง ม.5 เทอม 2</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> ชื่นชอบวิชาคำนวณและวิทยาศาสตร์ มีทักษะการใช้อุปกรณ์ห้องปฏิบัติการ และเข้าใจกระบวนการทางวิทยาศาสตร์เป็นอย่างดี</p>
+        <p><strong>แนวทางการศึกษาต่อ:</strong> สามารถสมัครเข้าศึกษาต่อในสายวิทย์-คณิตได้ทุกสาขา รวมถึงสถาปัตยกรรมศาสตร์ จิตวิทยา หรือคณะอื่นๆ ตามความสนใจ (ไม่มีข้อผูกมัดว่าต้องเข้า มจพ.)</p>
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100 text-xs text-amber-900">
+          <strong>ข้อควรรู้ & ข้อท้าทาย:</strong> มีภาระงานโครงงานค่อนข้างหนัก และอาจต้องเดินทางไปเรียนนอกสถานที่ ณ มจพ. ซึ่งใช้นอกเวลาเรียนปกติ จึงอาจต้องบริหารเวลาให้ดีเพื่อไม่ให้กระทบการส่งโครงงานเข้าแข่งขัน
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: ห้อง 4 -->
+    <div id="modal-h4" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-xs font-bold">ห้อง 4</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">เตรียมวิศวกรรมซอฟต์แวร์</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> มุ่งเน้นการปฏิบัติจริงด้านคอมพิวเตอร์ ได้แก่ การเขียนโปรแกรม เสริมทักษะด้านหุ่นยนต์ และเทคโนโลยี AI โดยใช้คณิตศาสตร์เป็นฐานสำคัญในการประมวลผล</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> หลายคนคิดว่าเรียนเฉพาะวิชาคอมพิวเตอร์ แต่ในความเป็นจริงยังคงต้องเรียนวิชาพื้นฐานหลัก เช่น ฟิสิกส์ เคมี และชีววิทยา เพื่อเปิดโอกาสให้นักเรียนเลือกต่อยอดในคณะวิศวกรรมศาสตร์สาขาอื่น หรือสายวิชาวิทยาศาสตร์ได้ตามต้องการ</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> ผู้ที่ชอบการคิดวิเคราะห์ สนุกกับการประดิษฐ์ แก้ไขปัญหา และมีความชื่นชอบในการสร้างสรรค์นวัตกรรมเทคโนโลยีใหม่ๆ</p>
+        <p><strong>แนวทางการศึกษาต่อ:</strong> วิศวกรรมคอมพิวเตอร์, วิศวกรรมซอฟต์แวร์, วิทยาการคอมพิวเตอร์ หรือสาขาอื่นๆ ในกลุ่มเทคโนโลยีและวิทยาศาสตร์</p>
+        <div class="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-xs text-blue-900">
+          <strong>ข้อควรรู้ & ข้อท้าทาย:</strong> หากไม่ชอบวิชาฟิสิกส์ เคมี และชีววิทยา อาจรู้สึกกดดันจากปริมาณเนื้อหาวิชาพื้นฐานทางวิทยาศาสตร์ที่ต้องเรียนควบคู่กัน
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: ห้อง 7 -->
+    <div id="modal-h7" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-800 text-xs font-bold">ห้อง 7</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">อุตสาหกรรมการบิน</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> เรียนรู้ทักษะอุตสาหกรรมการบินอย่างครบวงจร ทั้งการบริการบนเครื่องและภาคพื้นดินจากผู้เชี่ยวชาญ ได้รับการพัฒนาบุคลิกภาพตั้งแต่ระดับชั้น ม.4 ฝึกทักษะการรับมือสถานการณ์เฉพาะหน้า พร้อมปรับระดับภาษาอังกฤษและภาษาจีนเพื่อการสื่อสาร</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> ไม่ได้จำกัดเส้นทางอาชีพไว้เพียงพนักงานต้อนรับบนเครื่องบิน (แอร์โฮสเตส/สจ๊วต) เท่านั้น แต่ยังครอบคลุมงานภาคพื้นดิน บริการเคาน์เตอร์เช็คอิน งานประชาสัมพันธ์ ตลอดจนระบบจัดการสายการบินและงานสื่อสารสนามบิน</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> มีความกล้าแสดงออก มั่นใจในการสื่อสาร (ไม่จำเป็นต้องเก่งภาษามาตั้งแต่เริ่มต้น) ดูแลรักษาสุขภาพร่างกายอย่างสม่ำเสมอ และมีใจรักในงานบริการ</p>
+        <p><strong>แนวทางการศึกษาต่อ:</strong> ธุรกิจการบิน, การจัดการการท่องเที่ยวและการโรงแรม, คณะมนุษยศาสตร์/ศิลปศาสตร์ สาขาภาษาและการสื่อสาร</p>
+        <div class="p-4 rounded-2xl bg-sky-50 border border-sky-100 text-xs text-sky-900">
+          <strong>ข้อควรรู้ & ข้อท้าทาย:</strong> การศึกษาต่อในระดับอุดมศึกษาสาขาธุรกิจการบินอาจมีค่าใช้จ่ายค่อนข้างสูง จึงควรวางแผนล่วงหน้าเกี่ยวกับการทุนการศึกษาหรือการกู้ยืมเพื่อการศึกษา (กยศ.)
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: ห้อง 8 -->
+    <div id="modal-h8" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-xs font-bold">ห้อง 8</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">เตรียมนิติศาสตร์</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> ปูพื้นฐานวิชากฎหมายอย่างเข้มข้น ครอบคลุมกฎหมายแพ่ง-อาญา นิติปรัชญา ประวัติศาสตร์กฎหมาย และอาชญาวิทยา ช่วยลดระยะเวลาในการปรับตัวเมื่อเข้าศึกษาในระดับมหาวิทยาลัย</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> ไม่ได้จำกัดสายงานเฉพาะทนายความ อัยการ หรือผู้พิพากษาเท่านั้น แต่สามารถต่อยอดไปยังคณะรัฐศาสตร์ สังคมสงเคราะห์ศาสตร์ งานข้าราชการพลเรือน ตำรวจ หรือทหารได้อย่างกว้างขวาง</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> เปิดกว้าง กล้าคิด กล้าแสดงความคิดเห็น มีเหตุผล และชอบวิเคราะห์เพื่อหาข้อสรุปที่ถูกต้องตามหลักการ</p>
+        <p><strong>แนวทางการสอบ/การเรียน:</strong> การวัดผลและการเรียนส่วนใหญ่เป็นรูปแบบข้อเขียนบรรยายวิเคราะห์ 100% จึงต้องเน้นการฝึกทักษะการเรียบเรียงและเขียนจับประเด็น</p>
+        <div class="p-4 rounded-2xl bg-rose-50 border border-rose-100 text-xs text-rose-900">
+          <strong>ข้อควรรู้ & ข้อท้าทาย:</strong> นักเรียนที่คุ้นเคยกับการสอบแบบเลือกตอบ (ปรนัย) อาจต้องปรับตัวมากเป็นพิเศษกับการสอบรูปแบบการเขียนบรรยายวิเคราะห์
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: ห้อง 9 -->
+    <div id="modal-h9" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold">ห้อง 9</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">ภาษาอังกฤษ - ภาษาญี่ปุ่น</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> เป็นสายงานที่ตลาดยังมีความต้องการสูง มีโอกาสต่อยอดทางอาชีพหลากหลาย มีกิจกรรมค่ายภาษา การติวสอบวัดระดับภาษาญี่ปุ่น (JLPT) และการเรียนรู้กับวิทยากรเจ้าของภาษาโดยตรง</p>
+        <p><strong>รูปแบบการสอน:</strong> เริ่มสอนตั้งแต่พื้นฐานภาษาญี่ปุ่น ไม่จำเป็นต้องมีประสบการณ์มาก่อน (แนะนำให้ฝึกท่องจำตัวอักษรพื้นฐานล่วงหน้า)</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> รักการสื่อสาร กล้าแสดงออก ชื่นชอบวัฒนธรรมต่างประเทศ และมีความจำดีเพื่อรองรับการจำตัวอักษรและไวยากรณ์</p>
+        <p><strong>แนวทางการศึกษาต่อ/อาชีพ:</strong> คณะอักษรศาสตร์, มนุษยศาสตร์, ศิลปศาสตร์, งานล่าม-นักแปล, พนักงานบริษัทเอกชน/บริษัทญี่ปุ่น, งานบริการสายการบิน, สื่อมวลชน หรือติวเตอร์ภาษา</p>
+        <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-100 text-xs text-indigo-900">
+          <strong>ข้อควรรู้ & ข้อท้าทาย:</strong> ไวยากรณ์ภาษาญี่ปุ่นมีโครงสร้างแตกต่างจากภาษาไทยอย่างมาก และผู้เรียนจำเป็นต้องพัฒนาทักษะเฉพาะตัวควบคู่กับการใช้เทคโนโลยีช่วยแปลภาษาในปัจจุบัน
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: ห้อง 10 -->
+    <div id="modal-h10" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-red-100 text-red-800 text-xs font-bold">ห้อง 10</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">ภาษาอังกฤษ - ภาษาจีน</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> เรียนภาษาจีนเข้มข้น 6 คาบ/สัปดาห์ (3 หน่วยกิต) ครอบคลุมทั้งทักษะการฟัง พูด อ่าน เขียน และแปล มีทัศนศึกษา โครงการค่ายศึกษาต่อประเทศจีน และกิจกรรมส่งเสริมวัฒนธรรม เช่น การชงชาและการเขียนพู่กันจีนประจำปี</p>
+        <p><strong>การปูพื้นฐาน:</strong> เริ่มสอนตั้งแต่ระดับพื้นฐาน เน้นระบบออกเสียง **"พินอิน"** ให้แน่นในชั้น ม.4 ก่อนยกระดับคลังคำศัพท์และไวยากรณ์ในชั้น ม.5 และ ม.6</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> สนใจด้านภาษา มีความจำดี (เนื่องจากต้องจดจำอักษรจีนมากกว่า 3,000 คำ) และกล้าเปิดรับการสื่อสาร</p>
+        <p><strong>แนวทางการศึกษาต่อ/อาชีพ:</strong> คณะอักษรศาสตร์, มนุษยศาสตร์, นิเทศศาสตร์, การสอนภาษาจีน, ความสัมพันธ์ระหว่างประเทศ, งานล่าม/แปลภาษา, งานสายการบิน, โรงแรม หรือกระทรวงการต่างประเทศ</p>
+        <div class="p-4 rounded-2xl bg-red-50 border border-red-100 text-xs text-red-900">
+          <strong>ข้อควรรู้ & ข้อท้าทาย:</strong> อาจเกิดความท้อแท้จากการท่องจำตัวอักษรจีนที่มีจำนวนมาก ต้องอาศัยความขยัน หมั่นฝึกซ้อมออกเสียงพินอิน และทบทวนคำศัพท์อย่างสม่ำเสมอ
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
   <script>
+    // สคริปต์สกรอลล์ราบรื่น (Smooth Scroll)
     document.querySelectorAll('a[href^="#"]').forEach((ลิงก์) => {
       ลิงก์.addEventListener("click", (เหตุการณ์) => {
         เหตุการณ์.preventDefault();
@@ -235,6 +637,27 @@
           });
         }
       });
+    });
+
+    // สคริปต์เปิด/ปิด Modal รายละเอียดแผนการเรียน
+    function openModal(modalId) {
+      document.getElementById('modal-container').classList.remove('hidden');
+      document.querySelectorAll('.modal-content').forEach(el => el.classList.add('hidden'));
+      document.getElementById(modalId).classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // ป้องกันการสกรอลล์ด้านหลัง
+    }
+
+    function closeModal() {
+      document.getElementById('modal-container').classList.add('hidden');
+      document.querySelectorAll('.modal-content').forEach(el => el.classList.add('hidden'));
+      document.body.style.overflow = 'auto'; // คืนค่าสกรอลล์
+    }
+
+    // ปิด Modal เมื่อคลิกพื้นที่ภายนอก
+    document.getElementById('modal-container').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
     });
   </script>
 </body>
