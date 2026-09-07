@@ -179,8 +179,13 @@
         </h2>
 
         <p class="mt-4 leading-[1.65] text-purple-800/70">
-          ทำความรู้จักแต่ละแผนการเรียน เจาะลึกรายวิชาเพื่อการวางแผนอนาคตที่แม่นยำ
+          ทำความรู้จักแต่ละแผนการเรียน เจาะลึกรายวิชา และเกณฑ์การยื่นโควต้าเพื่อวางแผนอนาคต
         </p>
+
+        <!-- หมายเหตุคะแนนพฤติกรรม -->
+        <div class="mt-6 inline-block rounded-2xl bg-amber-100/80 px-6 py-3 border border-amber-200 text-amber-900 text-xs sm:text-sm font-semibold">
+          ⚠️ หมายเหตุ: ทั้ง 11 แผนการเรียนต้องมีคะแนนพฤติกรรม <span class="text-pink-600 underline decoration-2">70 คะแนนขึ้นไป</span> จึงจะสามารถยื่นโควต้าได้
+        </div>
       </div>
 
       <!-- Grid แสดงการ์ด 11 ห้องเรียน -->
@@ -205,6 +210,17 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">สิ่งแวดล้อม</span>
               </div>
             </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <span class="inline-block px-2.5 py-1 rounded-lg bg-red-50 text-red-600 font-bold text-xs">
+                📝 ต้องสอบเข้า (ไม่สามารถยื่นโควต้าได้)
+              </span>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h1')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
           </div>
         </div>
 
@@ -227,6 +243,17 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ความเป็นเลิศ</span>
               </div>
             </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <span class="inline-block px-2.5 py-1 rounded-lg bg-red-50 text-red-600 font-bold text-xs">
+                📝 ต้องสอบเข้า (ไม่สามารถยื่นโควต้าได้)
+              </span>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h2')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
           </div>
         </div>
 
@@ -248,6 +275,14 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ปฏิบัติการนวัตกรรม</span>
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">โครงงาน มจพ.</span>
               </div>
+            </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <ul class="text-xs text-purple-800/80 list-disc list-inside space-y-0.5">
+                <li>วิทยาศาสตร์ ≥ 2.0</li>
+                <li>คณิตศาสตร์ ≥ 2.0</li>
+                <li>ภาษาอังกฤษ ≥ 2.0</li>
+              </ul>
             </div>
           </div>
           <div class="pt-6">
@@ -276,6 +311,13 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ฟิสิกส์-เคมี-ชีวะ</span>
               </div>
             </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <ul class="text-xs text-purple-800/80 list-disc list-inside space-y-0.5">
+                <li>คณิตศาสตร์ ≥ 2.0</li>
+                <li>ภาษาอังกฤษ ≥ 2.0</li>
+              </ul>
+            </div>
           </div>
           <div class="pt-6">
             <button onclick="openModal('modal-h4')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
@@ -302,6 +344,19 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">คณิตศาสตร์เพิ่มเติม</span>
               </div>
             </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <ul class="text-xs text-purple-800/80 list-disc list-inside space-y-0.5">
+                <li>วิทยาศาสตร์ ≥ 2.0</li>
+                <li>คณิตศาสตร์ ≥ 2.0</li>
+                <li>ภาษาอังกฤษ ≥ 2.0</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h5')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
           </div>
         </div>
 
@@ -324,6 +379,19 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ธุรกิจการค้า</span>
               </div>
             </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <ul class="text-xs text-purple-800/80 list-disc list-inside space-y-0.5">
+                <li>วิทยาศาสตร์ ≥ 2.0</li>
+                <li>คณิตศาสตร์ ≥ 2.0</li>
+                <li>ภาษาอังกฤษ ≥ 2.0</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h6')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
           </div>
         </div>
 
@@ -345,6 +413,13 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">อังกฤษ-จีนเพื่อการสื่อสาร</span>
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">บริการสนามบิน</span>
               </div>
+            </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <ul class="text-xs text-purple-800/80 list-disc list-inside space-y-0.5">
+                <li>คณิตศาสตร์ ≥ 2.0</li>
+                <li>ภาษาอังกฤษ ≥ 2.0</li>
+              </ul>
             </div>
           </div>
           <div class="pt-6">
@@ -373,6 +448,14 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">การเขียนวิเคราะห์</span>
               </div>
             </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <ul class="text-xs text-purple-800/80 list-disc list-inside space-y-0.5">
+                <li>สังคมศึกษา ≥ 2.5</li>
+                <li>ภาษาไทย ≥ 2.5</li>
+                <li>ภาษาอังกฤษ ≥ 2.0</li>
+              </ul>
+            </div>
           </div>
           <div class="pt-6">
             <button onclick="openModal('modal-h8')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
@@ -399,6 +482,14 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ตัวอักษร & คำศัพท์</span>
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">อังกฤษการสื่อสาร</span>
               </div>
+            </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <ul class="text-xs text-purple-800/80 list-disc list-inside space-y-0.5">
+                <li>ภาษาไทย ≥ 2.0</li>
+                <li>ภาษาอังกฤษ ≥ 2.0</li>
+                <li>สังคมศึกษา ≥ 2.0</li>
+              </ul>
             </div>
           </div>
           <div class="pt-6">
@@ -427,6 +518,14 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ทัศนศึกษาต่างประเทศ</span>
               </div>
             </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <ul class="text-xs text-purple-800/80 list-disc list-inside space-y-0.5">
+                <li>ภาษาไทย ≥ 2.0</li>
+                <li>ภาษาอังกฤษ ≥ 2.0</li>
+                <li>สังคมศึกษา ≥ 2.0</li>
+              </ul>
+            </div>
           </div>
           <div class="pt-6">
             <button onclick="openModal('modal-h10')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
@@ -454,6 +553,17 @@
                 <span class="px-2.5 py-1 rounded-xl bg-pink-50 text-purple-900 text-xs">ดนตรีและการแสดง</span>
               </div>
             </div>
+            <div class="pt-2 border-t border-purple-50">
+              <h4 class="text-xs font-bold text-purple-950 mb-1">📌 คุณสมบัติเกรดยื่นโควต้า:</h4>
+              <ul class="text-xs text-purple-800/80 list-disc list-inside space-y-0.5">
+                <li>เกรดเฉลี่ยรวม (GPAX 5 ภาคเรียน) ≥ 2.0</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button onclick="openModal('modal-h11')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+              <span>ดูรายละเอียดเชิงลึก</span> ➔
+            </button>
           </div>
         </div>
 
@@ -497,6 +607,40 @@
   <!-- ==================== MODAL POPUP DETAILS ==================== -->
   <div id="modal-container" class="fixed inset-0 bg-purple-950/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     
+    <!-- Modal: ห้อง 1 -->
+    <div id="modal-h1" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 1</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">วิทย์-คณิต เทคโนโลยี สิ่งแวดล้อม และ พสวท. (ห้องเรียนพิเศษ)</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> เป็นห้องเรียนพิเศษที่เน้นกระบวนการวิจัย วิทยาศาสตร์เข้มข้น และโครงงานสิ่งแวดล้อมระดับสูง เหมาะสำหรับผู้ที่ต้องการศึกษาต่อในด้านวิทยาศาสตร์และเทคโนโลยีอย่างเข้มข้น</p>
+        <div class="p-4 rounded-2xl bg-red-50 border border-red-100 text-xs text-red-900">
+          <strong>คุณสมบัติเกรดยื่นโควต้า:</strong> แผนการเรียนนี้<strong>ต้องสอบเข้า</strong>ตามประกาศรับสมัครเฉพาะ 不สามารถยื่นโควต้าได้
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: ห้อง 2 -->
+    <div id="modal-h2" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 2</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">วิทย์-คณิต เทคโนโลยี สิ่งแวดล้อม และ พสวท. (สู่ความเป็นเลิศ)</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> มุ่งเน้นความเป็นเลิศทางวิชาการ เตรียมความพร้อมสำหรับการแข่งขันทางวิชาการและการศึกษาต่อในระดับอุดมศึกษา</p>
+        <div class="p-4 rounded-2xl bg-red-50 border border-red-100 text-xs text-red-900">
+          <strong>คุณสมบัติเกรดยื่นโควต้า:</strong> แผนการเรียนนี้<strong>ต้องสอบเข้า</strong>ตามประกาศรับสมัครเฉพาะ 不สามารถยื่นโควต้าได้
+        </div>
+      </div>
+    </div>
+
     <!-- Modal: ห้อง 3 -->
     <div id="modal-h3" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
@@ -510,7 +654,7 @@
         <p><strong>จุดเด่นสำคัญ:</strong> มีบันทึกข้อตกลงความร่วมมือ (MOU) กับคณะวิทยาศาสตร์ประยุกต์ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.) เปิดโอกาสให้นักเรียนได้ทำปฏิบัติการในห้องแล็บจริง และรับสิทธิ์ยื่น Portfolio เข้าศึกษาต่อในรอบ TCAS 1 โดยตรง</p>
         <p><strong>โครงสร้างการเรียน:</strong> ใช้หลักสูตรวิทย์-คณิตมาตรฐาน เพิ่มเติมวิชาเฉพาะ 3 รหัสวิชา ได้แก่ ปฏิบัติการ นวัตกรรม และวิทยาศาสตร์ประยุกต์ 1, 2, 3 (ชั้น ม.4 - ม.5 เทอม 1) พร้อมทั้งทำโครงงานวิทยาศาสตร์เพื่อนำเสนอในระดับมหาวิทยาลัยในช่วง ม.5 เทอม 2</p>
         <p><strong>ผู้ที่เหมาะสม:</strong> ชื่นชอบวิชาคำนวณและวิทยาศาสตร์ มีทักษะการใช้อุปกรณ์ห้องปฏิบัติการ และเข้าใจกระบวนการทางวิทยาศาสตร์เป็นอย่างดี</p>
-        <p><strong>แนวทางการศึกษาต่อ:</strong> สามารถสมัครเข้าศึกษาต่อในสายวิทย์-คณิตได้ทุกสาขา รวมถึงสถาปัตยกรรมศาสตร์ จิตวิทยา หรือคณะอื่นๆ ตามความสนใจ (ไม่มีข้อผูกมัดว่าต้องเข้า มจพ.)</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาวิทยาศาสตร์ 2.0 ขึ้นไป / รายวิชาคณิตศาสตร์ 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
         <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100 text-xs text-amber-900">
           <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> มีภาระงานโครงงานค่อนข้างหนัก และอาจต้องเดินทางไปเรียนนอกสถานที่ ณ มจพ. ซึ่งใช้นอกเวลาเรียนปกติ จึงอาจต้องบริหารเวลาให้ดีเพื่อไม่ให้กระทบการส่งโครงงานเข้าแข่งขัน
         </div>
@@ -530,10 +674,40 @@
         <p><strong>จุดเด่นสำคัญ:</strong> มุ่งเน้นการปฏิบัติจริงด้านคอมพิวเตอร์ ได้แก่ การเขียนโปรแกรม เสริมทักษะด้านหุ่นยนต์ และเทคโนโลยี AI โดยใช้คณิตศาสตร์เป็นฐานสำคัญในการประมวลผล</p>
         <p><strong>ข้อเข้าใจผิด:</strong> หลายคนคิดว่าเรียนเฉพาะวิชาคอมพิวเตอร์ แต่ในความเป็นจริงยังคงต้องเรียนวิชาพื้นฐานหลัก เช่น ฟิสิกส์ เคมี และชีววิทยา เพื่อเปิดโอกาสให้นักเรียนเลือกต่อยอดในคณะวิศวกรรมศาสตร์สาขาอื่น หรือสายวิชาวิทยาศาสตร์ได้ตามต้องการ</p>
         <p><strong>ผู้ที่เหมาะสม:</strong> ผู้ที่ชอบการคิดวิเคราะห์ สนุกกับการประดิษฐ์ แก้ไขปัญหา และมีความชื่นชอบในการสร้างสรรค์นวัตกรรมเทคโนโลยีใหม่ๆ</p>
-        <p><strong>แนวทางการศึกษาต่อ:</strong> วิศวกรรมคอมพิวเตอร์, วิศวกรรมซอฟต์แวร์, วิทยาการคอมพิวเตอร์ หรือสาขาอื่นๆ ในกลุ่มเทคโนโลยีและวิทยาศาสตร์</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาคณิตศาสตร์ 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
         <div class="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-xs text-blue-900">
           <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> หากไม่ชอบวิชาฟิสิกส์ เคมี และชีววิทยา อาจรู้สึกกดดันจากปริมาณเนื้อหาวิชาพื้นฐานทางวิทยาศาสตร์ที่ต้องเรียนควบคู่กัน
         </div>
+      </div>
+    </div>
+
+    <!-- Modal: ห้อง 5 -->
+    <div id="modal-h5" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 5</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">วิทยาศาสตร์ - คณิตศาสตร์</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> แผนการเรียนมาตรฐานทองคำ รองรับการศึกษาต่อคณะทางสายแพทย์ วิศวกรรมศาสตร์ วิทยาศาสตร์ และสาขาอื่นๆ ได้หลากหลาย</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาวิทยาศาสตร์ 2.0 ขึ้นไป / รายวิชาคณิตศาสตร์ 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
+      </div>
+    </div>
+
+    <!-- Modal: ห้อง 6 -->
+    <div id="modal-h6" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">ห้อง 6</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">โลจิสติกส์และซัพพลายเชน</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> เรียนรู้ระบบขนส่ง การจัดการคลังสินค้า และห่วงโซ่อุปทานระดับสากล เหมาะสำหรับผู้สนใจงานบริหารจัดการธุรกิจและระบบการขนส่ง</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาวิทยาศาสตร์ 2.0 ขึ้นไป / รายวิชาคณิตศาสตร์ 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
       </div>
     </div>
 
@@ -550,7 +724,7 @@
         <p><strong>จุดเด่นสำคัญ:</strong> เรียนรู้ทักษะอุตสาหกรรมการบินอย่างครบวงจร ทั้งการบริการบนเครื่องและภาคพื้นดินจากผู้เชี่ยวชาญ ได้รับการพัฒนาบุคลิกภาพตั้งแต่ระดับชั้น ม.4 ฝึกทักษะการรับมือสถานการณ์เฉพาะหน้า พร้อมปรับระดับภาษาอังกฤษและภาษาจีนเพื่อการสื่อสาร</p>
         <p><strong>ข้อเข้าใจผิด:</strong> ไม่ได้จำกัดเส้นทางอาชีพไว้เพียงพนักงานต้อนรับบนเครื่องบิน (แอร์โฮสเตส/สจ๊วต) เท่านั้น แต่ยังครอบคลุมงานภาคพื้นดิน บริการเคาน์เตอร์เช็คอิน งานประชาสัมพันธ์ ตลอดจนระบบจัดการสายการบินและงานสื่อสารสนามบิน</p>
         <p><strong>ผู้ที่เหมาะสม:</strong> มีความกล้าแสดงออก มั่นใจในการสื่อสาร (ไม่จำเป็นต้องเก่งภาษามาตั้งแต่เริ่มต้น) ดูแลรักษาสุขภาพร่างกายอย่างสม่ำเสมอ และมีใจรักในงานบริการ</p>
-        <p><strong>แนวทางการศึกษาต่อ:</strong> ธุรกิจการบิน, การจัดการการท่องเที่ยวและการโรงแรม, คณะมนุษยศาสตร์/ศิลปศาสตร์ สาขาภาษาและการสื่อสาร</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาคณิตศาสตร์ 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
         <div class="p-4 rounded-2xl bg-sky-50 border border-sky-100 text-xs text-sky-900">
           <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> การศึกษาต่อในระดับอุดมศึกษาสาขาธุรกิจการบินอาจมีค่าใช้จ่ายค่อนข้างสูง จึงควรวางแผนล่วงหน้าเกี่ยวกับการทุนการศึกษาหรือการกู้ยืมเพื่อการศึกษา (กยศ.)
         </div>
@@ -570,7 +744,7 @@
         <p><strong>จุดเด่นสำคัญ:</strong> ปูพื้นฐานวิชากฎหมายอย่างเข้มข้น ครอบคลุมกฎหมายแพ่ง-อาญา นิติปรัชญา ประวัติศาสตร์กฎหมาย และอาชญาวิทยา ช่วยลดระยะเวลาในการปรับตัวเมื่อเข้าศึกษาในระดับมหาวิทยาลัย</p>
         <p><strong>ข้อเข้าใจผิด:</strong> ไม่ได้จำกัดสายงานเฉพาะทนายความ อัยการ หรือผู้พิพากษาเท่านั้น แต่สามารถต่อยอดไปยังคณะรัฐศาสตร์ สังคมสงเคราะห์ศาสตร์ งานข้าราชการพลเรือน ตำรวจ หรือทหารได้อย่างกว้างขวาง</p>
         <p><strong>ผู้ที่เหมาะสม:</strong> เปิดกว้าง กล้าคิด กล้าแสดงความคิดเห็น มีเหตุผล และชอบวิเคราะห์เพื่อหาข้อสรุปที่ถูกต้องตามหลักการ</p>
-        <p><strong>แนวทางการสอบ/การเรียน:</strong> การวัดผลและการเรียนส่วนใหญ่เป็นรูปแบบข้อเขียนบรรยายวิเคราะห์ 100% จึงต้องเน้นการฝึกทักษะการเรียบเรียงและเขียนจับประเด็น</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาสังคมศึกษา 2.5 ขึ้นไป / รายวิชาภาษาไทย 2.5 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
         <div class="p-4 rounded-2xl bg-rose-50 border border-rose-100 text-xs text-rose-900">
           <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> นักเรียนที่คุ้นเคยกับการสอบแบบเลือกตอบ (ปรนัย) อาจต้องปรับตัวมากเป็นพิเศษกับการสอบรูปแบบการเขียนบรรยายวิเคราะห์
         </div>
@@ -590,7 +764,7 @@
         <p><strong>จุดเด่นสำคัญ:</strong> เป็นสายงานที่ตลาดยังมีความต้องการสูง มีโอกาสต่อยอดทางอาชีพหลากหลาย มีกิจกรรมค่ายภาษา การติวสอบวัดระดับภาษาญี่ปุ่น (JLPT) และการเรียนรู้กับวิทยากรเจ้าของภาษาโดยตรง</p>
         <p><strong>รูปแบบการสอน:</strong> เริ่มสอนตั้งแต่พื้นฐานภาษาญี่ปุ่น ไม่จำเป็นต้องมีประสบการณ์มาก่อน (แนะนำให้ฝึกท่องจำตัวอักษรพื้นฐานล่วงหน้า)</p>
         <p><strong>ผู้ที่เหมาะสม:</strong> รักการสื่อสาร กล้าแสดงออก ชื่นชอบวัฒนธรรมต่างประเทศ และมีความจำดีเพื่อรองรับการจำตัวอักษรและไวยากรณ์</p>
-        <p><strong>แนวทางการศึกษาต่อ/อาชีพ:</strong> คณะอักษรศาสตร์, มนุษยศาสตร์, ศิลปศาสตร์, งานล่าม-นักแปล, พนักงานบริษัทเอกชน/บริษัทญี่ปุ่น, งานบริการสายการบิน, สื่อมวลชน หรือติวเตอร์ภาษา</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาภาษาไทย 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป / รายวิชาสังคมศึกษา 2.0 ขึ้นไป</p>
         <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-100 text-xs text-indigo-900">
           <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> ไวยากรณ์ภาษาญี่ปุ่นมีโครงสร้างแตกต่างจากภาษาไทยอย่างมาก และผู้เรียนจำเป็นต้องพัฒนาทักษะเฉพาะตัวควบคู่กับการใช้เทคโนโลยีช่วยแปลภาษาในปัจจุบัน
         </div>
@@ -610,10 +784,25 @@
         <p><strong>จุดเด่นสำคัญ:</strong> เรียนภาษาจีนเข้มข้น 6 คาบ/สัปดาห์ (3 หน่วยกิต) ครอบคลุมทั้งทักษะการฟัง พูด อ่าน เขียน และแปล มีทัศนศึกษา โครงการค่ายศึกษาต่อประเทศจีน และกิจกรรมส่งเสริมวัฒนธรรม เช่น การชงชาและการเขียนพู่กันจีนประจำปี</p>
         <p><strong>การปูพื้นฐาน:</strong> เริ่มสอนตั้งแต่ระดับพื้นฐาน เน้นระบบออกเสียง **"พินอิน"** ให้แน่นในชั้น ม.4 ก่อนยกระดับคลังคำศัพท์และไวยากรณ์ในชั้น ม.5 และ ม.6</p>
         <p><strong>ผู้ที่เหมาะสม:</strong> สนใจด้านภาษา มีความจำดี (เนื่องจากต้องจดจำอักษรจีนมากกว่า 3,000 คำ) และกล้าเปิดรับการสื่อสาร</p>
-        <p><strong>แนวทางการศึกษาต่อ/อาชีพ:</strong> คณะอักษรศาสตร์, มนุษยศาสตร์, นิเทศศาสตร์, การสอนภาษาจีน, ความสัมพันธ์ระหว่างประเทศ, งานล่าม/แปลภาษา, งานสายการบิน, โรงแรม หรือกระทรวงการต่างประเทศ</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาภาษาไทย 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป / รายวิชาสังคมศึกษา 2.0 ขึ้นไป</p>
         <div class="p-4 rounded-2xl bg-red-50 border border-red-100 text-xs text-red-900">
           <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> อาจเกิดความท้อแท้จากการท่องจำตัวอักษรจีนที่มีจำนวนมาก ต้องอาศัยความขยัน หมั่นฝึกซ้อมออกเสียงพินอิน และทบทวนคำศัพท์อย่างสม่ำเสมอ
         </div>
+      </div>
+    </div>
+
+    <!-- Modal: ห้อง 11 -->
+    <div id="modal-h11" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+      <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 11</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">สปอร์ต-อาร์ต-มิวสิก (SAM)</h3>
+        </div>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+      </div>
+      <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
+        <p><strong>จุดเด่นสำคัญ:</strong> ส่งเสริมและพัฒนาอัจฉริยภาพด้านกีฬา ศิลปะ และดนตรีอย่างเต็มศักยภาพ มุ่งเน้นการฝึกทักษะเฉพาะทางควบคู่ไปกับวิชาการพื้นฐาน</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> เกรดเฉลี่ยรวมสะสม (GPAX) 5 ภาคเรียน 2.0 ขึ้นไป</p>
       </div>
     </div>
 
