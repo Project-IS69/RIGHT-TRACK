@@ -44,6 +44,59 @@
       transform: translateY(-7px);
       box-shadow: 0 22px 42px rgba(132, 96, 137, 0.22);
     }
+
+    [data-plan="h1"] { --plan-accent: #15803d; --plan-soft: #dcfce7; --plan-wash: #f0fdf4; --plan-border: #86efac; }
+    [data-plan="h2"] { --plan-accent: #1d4ed8; --plan-soft: #dbeafe; --plan-wash: #eff6ff; --plan-border: #93c5fd; }
+    [data-plan="h3"] { --plan-accent: #c2410c; --plan-soft: #ffedd5; --plan-wash: #fff7ed; --plan-border: #fdba74; }
+    [data-plan="h4"] { --plan-accent: #6d28d9; --plan-soft: #ede9fe; --plan-wash: #f5f3ff; --plan-border: #c4b5fd; }
+    [data-plan="h5"] { --plan-accent: #ef4444; --plan-soft: #fee2e2; --plan-wash: #fff5f5; --plan-border: #fca5a5; }
+    [data-plan="h6"] { --plan-accent: #4d7c0f; --plan-soft: #ecfccb; --plan-wash: #f7fee7; --plan-border: #bef264; }
+    [data-plan="h7"] { --plan-accent: #0284c7; --plan-soft: #e0f2fe; --plan-wash: #f0f9ff; --plan-border: #7dd3fc; }
+    [data-plan="h8"] { --plan-accent: #3f4652; --plan-soft: #e8eaed; --plan-wash: #f7f8fa; --plan-border: #b8bec7; }
+    [data-plan="h9"] { --plan-accent: #db2777; --plan-soft: #fce7f3; --plan-wash: #fdf2f8; --plan-border: #f9a8d4; }
+    [data-plan="h10"] { --plan-accent: #047857; --plan-soft: #d1fae5; --plan-wash: #ecfdf5; --plan-border: #6ee7b7; }
+    [data-plan="h11"] { --plan-accent: #a21caf; --plan-soft: #fae8ff; --plan-wash: #fdf4ff; --plan-border: #e9a8f4; }
+
+    .plan-card {
+      border-color: var(--plan-border);
+      border-top: 5px solid var(--plan-accent);
+      background: linear-gradient(145deg, var(--plan-soft), var(--plan-wash) 48%, white 100%);
+    }
+
+    .plan-card h3,
+    .plan-card h4 {
+      color: var(--plan-accent);
+    }
+
+    .plan-card > div:first-child > div:first-child > span:last-child,
+    .plan-card .flex.flex-wrap.gap-1 > span {
+      background: var(--plan-soft);
+      color: var(--plan-accent);
+    }
+
+    .plan-card .plan-number,
+    .plan-modal .plan-number {
+      background: var(--plan-soft);
+      color: var(--plan-accent);
+    }
+
+    .plan-card .plan-button {
+      background: var(--plan-soft);
+      color: var(--plan-accent);
+    }
+
+    .plan-card .plan-button:hover {
+      background: var(--plan-border);
+    }
+
+    .plan-modal {
+      border-color: var(--plan-border);
+      border-top: 5px solid var(--plan-accent);
+    }
+
+    .plan-modal h3 {
+      color: var(--plan-accent);
+    }
   </style>
 </head>
 
@@ -102,15 +155,8 @@
           </a>
         </div>
 
-        <div class="grid gap-5 sm:grid-cols-3 lg:grid-cols-1">
-          <a href="#quiz" class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-100 text-2xl">💗</div>
-            <h2 class="text-xl font-bold leading-snug text-purple-950">ความสนใจ</h2>
-            <p class="mt-2 leading-[1.6] text-purple-800/70">
-              สำรวจสิ่งที่คุณชอบและเพลิดเพลินเมื่อได้ลงมือทำ
-            </p>
-          </a>
-
+        <!-- Layout 2 การ์ด (เป้าหมาย และ แนวทางที่เหมาะสม) -->
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
           <a href="#majors" class="การ์ดลอย เงานุ่ม rounded-3xl border border-purple-100 bg-white p-6">
             <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-100 text-2xl">🌷</div>
             <h2 class="text-xl font-bold leading-snug text-purple-950">เป้าหมาย</h2>
@@ -137,9 +183,10 @@
         <h2 class="text-3xl font-bold leading-snug text-purple-950">เกี่ยวกับเรา</h2>
 
         <p class="mt-6 text-lg leading-[1.65] text-purple-800/75">
-          เว็บไซต์นี้จัดทำขึ้นเพื่อช่วยให้นักเรียนได้สำรวจความสนใจ
-          ความถนัด และเป้าหมายของตนเอง ก่อนตัดสินใจเลือกแผนการเรียน
-          โดยนำเสนอข้อมูลในรูปแบบที่เข้าใจง่าย เป็นมิตร และไม่สร้างความกดดัน
+          เว็บไซต์นี้ช่วยให้นักเรียนสำรวจความสนใจและความถนัด เพื่อค้นหาแผนการเรียนที่เหมาะกับตนเอง
+          รวบรวมข้อมูลครบทั้ง 11 แผน ทั้งจุดเด่น คุณสมบัติเกรดยื่นโควต้า และข้อควรพิจารณา
+          พร้อมแนวทางศึกษาต่อและอาชีพ เพื่อใช้เปรียบเทียบทางเลือกและวางแผนอนาคต
+          ใช้เป็นข้อมูลเบื้องต้นประกอบการตัดสินใจร่วมกับครูหรือผู้ปกครอง
         </p>
       </div>
     </section>
@@ -182,7 +229,6 @@
           ทำความรู้จักแต่ละแผนการเรียน เจาะลึกรายวิชา และเกณฑ์การยื่นโควต้าเพื่อวางแผนอนาคต
         </p>
 
-        <!-- หมายเหตุคะแนนพฤติกรรม -->
         <div class="mt-6 inline-block rounded-2xl bg-amber-100/80 px-6 py-3 border border-amber-200 text-amber-900 text-xs sm:text-sm font-semibold">
           ⚠️ หมายเหตุ: ทั้ง 11 แผนการเรียนต้องมีคะแนนพฤติกรรม <span class="text-pink-600 underline decoration-2">70 คะแนนขึ้นไป</span> จึงจะสามารถยื่นโควต้าได้
         </div>
@@ -192,10 +238,10 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         
         <!-- ห้อง 1 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h1" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 1</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 1</span>
               <span class="px-2.5 py-0.5 rounded-full bg-pink-50 text-pink-600 text-xs font-medium">ห้องเรียนพิเศษ</span>
             </div>
             <div>
@@ -218,22 +264,21 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h1')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h1')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
         </div>
-
         <!-- ห้อง 2 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h2" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 2</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 2</span>
               <span class="px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-600 text-xs font-medium">สู่ความเป็นเลิศ</span>
             </div>
             <div>
-              <h3 class="text-lg font-bold text-purple-950 leading-snug">วิทย์-คณิต เทคโนโลยี สิ่งแวดล้อม และ พสวท.</h3>
-              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">มุ่งเน้นความเป็นเลิศทางวิชาการ เตรียมพร้อมสำหรับการแข่งขันและต่อยอดในระดับอุดมศึกษา</p>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">วิทย์-คณิต สู่ความเป็นเลิศ (Excellence)</h3>
+              <p class="text-xs text-purple-800/70 leading-relaxed mt-1">เข้มข้นวิทยาศาสตร์และคณิตศาสตร์ เตรียมความพร้อมสู่สายวิทยาศาสตร์สุขภาพ วิศวกรรมศาสตร์ และมหาวิทยาลัยชั้นนำ</p>
             </div>
             <div class="space-y-1.5 pt-1">
               <h4 class="text-xs font-bold uppercase tracking-wider text-pink-500">จุดเด่น/วิชาเน้น:</h4>
@@ -251,17 +296,17 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h2')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h2')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
         </div>
 
         <!-- ห้อง 3 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h3" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold">ห้อง 3</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold">ห้อง 3</span>
               <span class="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-xs font-medium">MOU ร่วมกับ มจพ.</span>
             </div>
             <div>
@@ -286,17 +331,17 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h3')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h3')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
         </div>
 
         <!-- ห้อง 4 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h4" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold">ห้อง 4</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold">ห้อง 4</span>
               <span class="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">โค้ดดิ้ง & หุ่นยนต์</span>
             </div>
             <div>
@@ -320,17 +365,17 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h4')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h4')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
         </div>
 
         <!-- ห้อง 5 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h5" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 5</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 5</span>
               <span class="px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-600 text-xs font-medium">แผนมาตรฐาน</span>
             </div>
             <div>
@@ -354,17 +399,17 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h5')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h5')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
         </div>
 
         <!-- ห้อง 6 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h6" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">ห้อง 6</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">ห้อง 6</span>
               <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium">บริหารจัดการ</span>
             </div>
             <div>
@@ -389,17 +434,17 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h6')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h6')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
         </div>
 
         <!-- ห้อง 7 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h7" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold">ห้อง 7</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold">ห้อง 7</span>
               <span class="px-2.5 py-0.5 rounded-full bg-sky-50 text-sky-700 text-xs font-medium">บริการ & ภาษา</span>
             </div>
             <div>
@@ -423,21 +468,21 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h7')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h7')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
         </div>
 
         <!-- ห้อง 8 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h8" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-xs font-bold">ห้อง 8</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-xs font-bold">ห้อง 8</span>
               <span class="px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-xs font-medium">วิเคราะห์ & กฎหมาย</span>
             </div>
             <div>
-              <h3 class="text-lg font-bold text-purple-950 leading-snug">เตรียมนิติศาสตร์</h3>
+              <h3 class="text-lg font-bold text-purple-950 leading-snug">เตรียมนิติศาสตร์ - รัฐศาสตร์</h3>
               <p class="text-xs text-purple-800/70 leading-relaxed mt-1">เจาะลึกกฎหมายแพ่ง-อาญา นิติปรัชญา เน้นทักษะการคิดวิเคราะห์และการเขียนบรรยายตอบข้อสอบ</p>
             </div>
             <div class="space-y-1.5 pt-1">
@@ -458,17 +503,17 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h8')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h8')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
         </div>
 
         <!-- ห้อง 9 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h9" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold">ห้อง 9</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold">ห้อง 9</span>
               <span class="px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">ภาษา & วัฒนธรรม</span>
             </div>
             <div>
@@ -493,17 +538,17 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h9')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h9')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
         </div>
 
         <!-- ห้อง 10 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h10" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-red-100 text-red-800 text-xs font-bold">ห้อง 10</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-red-100 text-red-800 text-xs font-bold">ห้อง 10</span>
               <span class="px-2.5 py-0.5 rounded-full bg-red-50 text-red-700 text-xs font-medium">ภาษา & โอกาสทางธุรกิจ</span>
             </div>
             <div>
@@ -528,17 +573,17 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h10')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h10')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
         </div>
 
         <!-- ห้อง 11 -->
-        <div class="การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
+        <div data-plan="h11" class="plan-card การ์ดลอย เงานุ่ม rounded-3xl border border-pink-100 bg-white p-6 sm:p-7 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 11</span>
+              <span class="plan-number px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 11</span>
               <span class="px-2.5 py-0.5 rounded-full bg-orange-50 text-orange-700 text-xs font-medium">ความสามารถพิเศษ</span>
             </div>
             <div>
@@ -561,7 +606,7 @@
             </div>
           </div>
           <div class="pt-6">
-            <button onclick="openModal('modal-h11')" class="w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
+            <button onclick="openModal('modal-h11')" class="plan-button w-full py-2.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-900 font-semibold text-xs transition-colors flex items-center justify-center gap-1">
               <span>ดูรายละเอียดเชิงลึก</span> ➔
             </button>
           </div>
@@ -608,201 +653,211 @@
   <div id="modal-container" class="fixed inset-0 bg-purple-950/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     
     <!-- Modal: ห้อง 1 -->
-    <div id="modal-h1" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h1" data-plan="h1" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 1</span>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 1</span>
           <h3 class="text-xl font-bold text-purple-950 mt-1">วิทย์-คณิต เทคโนโลยี สิ่งแวดล้อม และ พสวท. (ห้องเรียนพิเศษ)</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> เป็นห้องเรียนพิเศษที่เน้นกระบวนการวิจัย วิทยาศาสตร์เข้มข้น และโครงงานสิ่งแวดล้อมระดับสูง เหมาะสำหรับผู้ที่ต้องการศึกษาต่อในด้านวิทยาศาสตร์และเทคโนโลยีอย่างเข้มข้น</p>
-        <div class="p-4 rounded-2xl bg-red-50 border border-red-100 text-xs text-red-900">
-          <strong>คุณสมบัติเกรดยื่นโควต้า:</strong> แผนการเรียนนี้<strong>ต้องสอบเข้า</strong>ตามประกาศรับสมัครเฉพาะ 不สามารถยื่นโควต้าได้
-        </div>
+        <p><strong>จุดเด่นสำคัญ:</strong> เน้นทำโครงงานวิทยาศาสตร์และวิจัยอย่างเป็นระบบ เมื่อทำโครงงานเสร็จ นักเรียนมีโอกาสนำเสนอผลงานในเวทีระดับภูมิภาคร่วมกับเครือข่ายห้องเรียนพิเศษภาคกลางตอนบน วิชาเพิ่มเติมประกอบด้วยเทคนิคปฏิบัติการฟิสิกส์ เคมี ชีววิทยา และคอมพิวเตอร์ คณิตศาสตร์ขั้นสูง ระเบียบวิธีวิจัย และโครงงาน</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> หลายคนคิดว่าแผนนี้ยากและกดดันเกินไป ความท้าทายสำคัญมักเป็นการปรับตัวกับเนื้อหาและเพื่อนที่มีพื้นฐานพร้อมกว่า การเตรียมพื้นฐานและเลือกเรียนจากความสนใจของตนเองช่วยให้ปรับตัวได้ดีขึ้น</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> ชอบวิทย์-คณิต สนใจงานวิจัย มีทักษะสังเกต คิดคำนวณและวิเคราะห์ รวมถึงพร้อมฝึกใช้เครื่องมือวิทยาศาสตร์ในห้องปฏิบัติการ</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> วิทยาศาสตร์ วิศวกรรมศาสตร์ วิทยาศาสตร์สุขภาพ รวมถึงสังคมศาสตร์ตามความสนใจ</p>
+        <div class="p-4 rounded-2xl bg-red-50 border border-red-100 text-xs text-red-900"><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> ไม่มีโควต้า คัดเลือกด้วยข้อสอบกลางระดับประเทศตามประกาศรับสมัคร</div>
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100 text-xs text-amber-900"><strong>ข้อควรระวัง:</strong> ควรเตรียมวิทยาศาสตร์และคณิตศาสตร์สำหรับการสอบคัดเลือก และบริหารเวลาให้สมดุลระหว่างการเรียนกับภาระงานโครงงานและวิจัย</div>
       </div>
     </div>
 
     <!-- Modal: ห้อง 2 -->
-    <div id="modal-h2" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h2" data-plan="h2" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 2</span>
-          <h3 class="text-xl font-bold text-purple-950 mt-1">วิทย์-คณิต เทคโนโลยี สิ่งแวดล้อม และ พสวท. (สู่ความเป็นเลิศ)</h3>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 2</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">วิทย์-คณิต สู่ความเป็นเลิศ (Excellence)</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> มุ่งเน้นความเป็นเลิศทางวิชาการ เตรียมความพร้อมสำหรับการแข่งขันทางวิชาการและการศึกษาต่อในระดับอุดมศึกษา</p>
-        <div class="p-4 rounded-2xl bg-red-50 border border-red-100 text-xs text-red-900">
-          <strong>คุณสมบัติเกรดยื่นโควต้า:</strong> แผนการเรียนนี้<strong>ต้องสอบเข้า</strong>ตามประกาศรับสมัครเฉพาะ 不สามารถยื่นโควต้าได้
-        </div>
+        <p><strong>จุดเด่นสำคัญ:</strong> เข้มข้นด้านโครงงานและการวิจัย นักเรียนมีโอกาสนำเสนอผลงานในเวทีระดับประเทศ “งานประชุมวิชาการ พสวท. สู่ความเป็นเลิศ” เรียนเทคนิคปฏิบัติการฟิสิกส์ เคมี ชีววิทยา และคอมพิวเตอร์ คณิตศาสตร์ขั้นสูง ระเบียบวิธีวิจัย และโครงงาน</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> ความกดดันไม่ได้เกิดจากความยากของแผนการเรียนเพียงอย่างเดียว แต่อาจมาจากพื้นฐานเดิมและการปรับตัวกับเพื่อน การเลือกแผนนี้ด้วยความสนใจของนักเรียนเองและทบทวนพื้นฐานล่วงหน้าจึงสำคัญ</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> รักวิทย์-คณิต สนุกกับการทำโครงงาน ช่างสังเกต คิดคำนวณได้ และพร้อมฝึกใช้อุปกรณ์วิทยาศาสตร์</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> วิทยาศาสตร์ วิศวกรรมศาสตร์ วิทยาศาสตร์สุขภาพ และสังคมศาสตร์ตามความถนัด</p>
+        <div class="p-4 rounded-2xl bg-red-50 border border-red-100 text-xs text-red-900"><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> ไม่มีโควต้า ต้องสมัครและสอบเข้าตามเกณฑ์ของโครงการเท่านั้น</div>
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100 text-xs text-amber-900"><strong>ข้อควรระวัง:</strong> การคัดเลือกใช้ข้อสอบกลางระดับประเทศ จึงควรเตรียมวิทยาศาสตร์และคณิตศาสตร์ให้พร้อม ประเมินความสนใจและพื้นฐานของตนเองก่อนเลือก และบริหารเวลาเพื่อลดความเครียด</div>
       </div>
     </div>
 
     <!-- Modal: ห้อง 3 -->
-    <div id="modal-h3" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h3" data-plan="h3" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-bold">ห้อง 3</span>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-bold">ห้อง 3</span>
           <h3 class="text-xl font-bold text-purple-950 mt-1">นวัตกรรมและวิทยาศาสตร์ประยุกต์</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> มีบันทึกข้อตกลงความร่วมมือ (MOU) กับคณะวิทยาศาสตร์ประยุกต์ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.) เปิดโอกาสให้นักเรียนได้ทำปฏิบัติการในห้องแล็บจริง และรับสิทธิ์ยื่น Portfolio เข้าศึกษาต่อในรอบ TCAS 1 โดยตรง</p>
-        <p><strong>โครงสร้างการเรียน:</strong> ใช้หลักสูตรวิทย์-คณิตมาตรฐาน เพิ่มเติมวิชาเฉพาะ 3 รหัสวิชา ได้แก่ ปฏิบัติการ นวัตกรรม และวิทยาศาสตร์ประยุกต์ 1, 2, 3 (ชั้น ม.4 - ม.5 เทอม 1) พร้อมทั้งทำโครงงานวิทยาศาสตร์เพื่อนำเสนอในระดับมหาวิทยาลัยในช่วง ม.5 เทอม 2</p>
-        <p><strong>ผู้ที่เหมาะสม:</strong> ชื่นชอบวิชาคำนวณและวิทยาศาสตร์ มีทักษะการใช้อุปกรณ์ห้องปฏิบัติการ และเข้าใจกระบวนการทางวิทยาศาสตร์เป็นอย่างดี</p>
+        <p><strong>จุดเด่นสำคัญ:</strong> ทำ MOU กับคณะวิทยาศาสตร์ประยุกต์ มจพ. นักเรียนได้ร่วมกิจกรรมและทำปฏิบัติการในห้องแล็บมหาวิทยาลัย พร้อมสิทธิ์ยื่น Portfolio รอบ TCAS 1 ตามเงื่อนไขโครงการ หลักสูตรสามัญวิทย์-คณิตเพิ่มเติมวิชาปฏิบัติการ นวัตกรรม และวิทยาศาสตร์ประยุกต์ 1–3 ในช่วง ม.4 ถึง ม.5 ภาคเรียนที่ 1 และทำโครงงานเพื่อนำเสนอระดับมหาวิทยาลัยใน ม.5 ภาคเรียนที่ 2</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> เป็นแผนสามัญที่เพิ่มการประยุกต์ใช้ทักษะช่างและวิศวกรรม ไม่ได้บังคับให้เรียนต่อ มจพ. เท่านั้น</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> ชอบคำนวณและวิทยาศาสตร์ ใช้อุปกรณ์ห้องปฏิบัติการได้ และสนุกกับการแก้ปัญหาอย่างเป็นขั้นตอน</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> วิทย์-คณิต วิศวกรรมศาสตร์ สถาปัตยกรรมศาสตร์ จิตวิทยา หรือสาขาอื่นตามความสนใจ</p>
         <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาวิทยาศาสตร์ 2.0 ขึ้นไป / รายวิชาคณิตศาสตร์ 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
-        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100 text-xs text-amber-900">
-          <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> มีภาระงานโครงงานค่อนข้างหนัก และอาจต้องเดินทางไปเรียนนอกสถานที่ ณ มจพ. ซึ่งใช้นอกเวลาเรียนปกติ จึงอาจต้องบริหารเวลาให้ดีเพื่อไม่ให้กระทบการส่งโครงงานเข้าแข่งขัน
-        </div>
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100 text-xs text-amber-900"><strong>ข้อควรระวัง:</strong> มีภาระงานเพิ่มและต้องจัดเวลาทำโครงงานนอกชั้นเรียน การเดินทางไปเรียนที่มหาวิทยาลัยไม่ใช่เวลาทำโครงงาน จึงควรวางแผนงานและสะสมผลงาน Portfolio ตั้งแต่ ม.4 การสนับสนุนจากมหาวิทยาลัยอาจขึ้นอยู่กับเงื่อนไขและความร่วมมือในอนาคต</div>
       </div>
     </div>
 
     <!-- Modal: ห้อง 4 -->
-    <div id="modal-h4" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h4" data-plan="h4" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-xs font-bold">ห้อง 4</span>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-xs font-bold">ห้อง 4</span>
           <h3 class="text-xl font-bold text-purple-950 mt-1">เตรียมวิศวกรรมซอฟต์แวร์</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> มุ่งเน้นการปฏิบัติจริงด้านคอมพิวเตอร์ ได้แก่ การเขียนโปรแกรม เสริมทักษะด้านหุ่นยนต์ และเทคโนโลยี AI โดยใช้คณิตศาสตร์เป็นฐานสำคัญในการประมวลผล</p>
-        <p><strong>ข้อเข้าใจผิด:</strong> หลายคนคิดว่าเรียนเฉพาะวิชาคอมพิวเตอร์ แต่ในความเป็นจริงยังคงต้องเรียนวิชาพื้นฐานหลัก เช่น ฟิสิกส์ เคมี และชีววิทยา เพื่อเปิดโอกาสให้นักเรียนเลือกต่อยอดในคณะวิศวกรรมศาสตร์สาขาอื่น หรือสายวิชาวิทยาศาสตร์ได้ตามต้องการ</p>
-        <p><strong>ผู้ที่เหมาะสม:</strong> ผู้ที่ชอบการคิดวิเคราะห์ สนุกกับการประดิษฐ์ แก้ไขปัญหา และมีความชื่นชอบในการสร้างสรรค์นวัตกรรมเทคโนโลยีใหม่ๆ</p>
+        <p><strong>จุดเด่นสำคัญ:</strong> เรียนพื้นฐานวิศวกรรมซอฟต์แวร์และคอมพิวเตอร์ มีวิชาเพิ่มเติมด้านการเขียนโปรแกรม หุ่นยนต์ และเทคโนโลยี AI โดยคณิตศาสตร์เป็นพื้นฐานสำคัญของการเขียนโปรแกรม</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> ไม่ได้เรียนคอมพิวเตอร์อย่างเดียว ยังเรียนวิชาพื้นฐานรวมถึงฟิสิกส์ เคมี และชีววิทยา เพื่อเปิดทางเลือกไปยังสาขาอื่นได้</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> ชอบคิด ประดิษฐ์ สร้างสิ่งใหม่ และแก้ปัญหา สนใจการพัฒนาเทคโนโลยีด้วยตนเอง</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> วิศวกรรมซอฟต์แวร์ วิทยาการคอมพิวเตอร์ เทคโนโลยีสารสนเทศ Data Science, Game Developer หรืออาชีพอื่นตามความสนใจ</p>
         <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาคณิตศาสตร์ 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
-        <div class="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-xs text-blue-900">
-          <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> หากไม่ชอบวิชาฟิสิกส์ เคมี และชีววิทยา อาจรู้สึกกดดันจากปริมาณเนื้อหาวิชาพื้นฐานทางวิทยาศาสตร์ที่ต้องเรียนควบคู่กัน
-        </div>
+        <div class="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-xs text-blue-900"><strong>ข้อควรระวัง:</strong> ผู้ที่คาดว่าจะเรียนเฉพาะคอมพิวเตอร์อาจรู้สึกหนักเมื่อต้องเรียนวิทยาศาสตร์พื้นฐานด้วย ควรทบทวนคณิตศาสตร์และฝึกเขียนโปรแกรมสม่ำเสมอ พร้อมเลือกแผนนี้เพราะสนใจการสร้างและแก้ปัญหาจริง ๆ</div>
       </div>
     </div>
 
     <!-- Modal: ห้อง 5 -->
-    <div id="modal-h5" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h5" data-plan="h5" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 5</span>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 5</span>
           <h3 class="text-xl font-bold text-purple-950 mt-1">วิทยาศาสตร์ - คณิตศาสตร์</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> แผนการเรียนมาตรฐานทองคำ รองรับการศึกษาต่อคณะทางสายแพทย์ วิศวกรรมศาสตร์ วิทยาศาสตร์ และสาขาอื่นๆ ได้หลากหลาย</p>
-        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาวิทยาศาสตร์ 2.0 ขึ้นไป / รายวิชาคณิตศาสตร์ 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
+        <p><strong>จุดเด่นสำคัญ:</strong> ต่อยอดได้หลากหลายคณะและอาชีพ เรียนวิชาฟิสิกส์ เคมี และชีววิทยาเพิ่มเติมจากวิชาพื้นฐาน</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> เป็นแผนที่เปิดทางเลือก ไม่ได้หมายความว่าไม่มีวิชาเน้นหรือไม่ต้องใช้ความพยายาม</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> ชอบวิทยาศาสตร์และคณิตศาสตร์ พร้อมใช้ทักษะการคิดคำนวณและเรียนรู้เนื้อหาวิทยาศาสตร์พื้นฐาน</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> วิศวกรรมศาสตร์ สาธารณสุขศาสตร์ วิทยาศาสตร์ทั่วไป และครุศาสตร์/ศึกษาศาสตร์สายวิทย์</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> เกรดเฉลี่ยกลุ่มวิทยาศาสตร์ ≥ 2.00, คณิตศาสตร์ ≥ 2.00 และภาษาอังกฤษ ≥ 2.00</p>
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100 text-xs text-amber-900"><strong>ข้อควรระวัง:</strong> เนื้อหากว้าง ควรตั้งใจเรียนสม่ำเสมอและไม่ทิ้งวิชาใดวิชาหนึ่ง</div>
       </div>
     </div>
 
     <!-- Modal: ห้อง 6 -->
-    <div id="modal-h6" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h6" data-plan="h6" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">ห้อง 6</span>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">ห้อง 6</span>
           <h3 class="text-xl font-bold text-purple-950 mt-1">โลจิสติกส์และซัพพลายเชน</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> เรียนรู้ระบบขนส่ง การจัดการคลังสินค้า และห่วงโซ่อุปทานระดับสากล เหมาะสำหรับผู้สนใจงานบริหารจัดการธุรกิจและระบบการขนส่ง</p>
-        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาวิทยาศาสตร์ 2.0 ขึ้นไป / รายวิชาคณิตศาสตร์ 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
+        <p><strong>จุดเด่นสำคัญ:</strong> เรียนรู้ระบบขนส่ง การจัดการคลังสินค้า และกระบวนการธุรกิจการค้าระหว่างประเทศ</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> ไม่ได้ทำหน้าที่เพียงส่งของ แต่เป็นการวางแผนและบริหารระบบขนส่งในระดับองค์กร</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> ชอบวางแผนและจัดการ มีทักษะคำนวณ และสนใจธุรกิจการค้า</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> การจัดการโลจิสติกส์ บริหารธุรกิจ การค้าระหว่างประเทศ และอุตสาหกรรมบริการ</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> เกรดเฉลี่ยกลุ่มวิทยาศาสตร์ ≥ 2.00, คณิตศาสตร์ ≥ 2.00 และภาษาอังกฤษ ≥ 2.00</p>
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100 text-xs text-amber-900"><strong>ข้อควรระวัง:</strong> ควรให้ความสำคัญกับทั้งวิชาคำนวณและภาษาอังกฤษควบคู่กัน</div>
       </div>
     </div>
 
     <!-- Modal: ห้อง 7 -->
-    <div id="modal-h7" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h7" data-plan="h7" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-800 text-xs font-bold">ห้อง 7</span>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-800 text-xs font-bold">ห้อง 7</span>
           <h3 class="text-xl font-bold text-purple-950 mt-1">อุตสาหกรรมการบิน</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> เรียนรู้ทักษะอุตสาหกรรมการบินอย่างครบวงจร ทั้งการบริการบนเครื่องและภาคพื้นดินจากผู้เชี่ยวชาญ ได้รับการพัฒนาบุคลิกภาพตั้งแต่ระดับชั้น ม.4 ฝึกทักษะการรับมือสถานการณ์เฉพาะหน้า พร้อมปรับระดับภาษาอังกฤษและภาษาจีนเพื่อการสื่อสาร</p>
-        <p><strong>ข้อเข้าใจผิด:</strong> ไม่ได้จำกัดเส้นทางอาชีพไว้เพียงพนักงานต้อนรับบนเครื่องบิน (แอร์โฮสเตส/สจ๊วต) เท่านั้น แต่ยังครอบคลุมงานภาคพื้นดิน บริการเคาน์เตอร์เช็คอิน งานประชาสัมพันธ์ ตลอดจนระบบจัดการสายการบินและงานสื่อสารสนามบิน</p>
-        <p><strong>ผู้ที่เหมาะสม:</strong> มีความกล้าแสดงออก มั่นใจในการสื่อสาร (ไม่จำเป็นต้องเก่งภาษามาตั้งแต่เริ่มต้น) ดูแลรักษาสุขภาพร่างกายอย่างสม่ำเสมอ และมีใจรักในงานบริการ</p>
+        <p><strong>จุดเด่นสำคัญ:</strong> เรียนรู้งานบริการบนเครื่องบินและภาคพื้นดินจากผู้เชี่ยวชาญ เน้นภาษาอังกฤษและภาษาจีน ม.4 เรียนพัฒนาบุคลิกภาพ ฝึกเอาตัวรอด ความกล้าแสดงออก และความมั่นใจในการสื่อสาร</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> ไม่ได้จำกัดอาชีพอยู่ที่นักบินหรือพนักงานต้อนรับบนเครื่องบิน ยังมีงานภาคพื้น เคาน์เตอร์เช็คอิน งานประกาศ งานดูแลพื้นที่สนามบิน และระบบสื่อสาร</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> รักงานบริการ มีทัศนคติดี เปิดรับการพัฒนาตนเอง กล้าสื่อสาร และพร้อมดูแลสุขภาพร่างกาย ไม่จำเป็นต้องเก่งภาษามาก่อน</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> ธุรกิจการบิน พนักงานต้อนรับบนเครื่องบิน พนักงานภาคพื้นดิน งานบริการและการท่องเที่ยว</p>
         <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาคณิตศาสตร์ 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
-        <div class="p-4 rounded-2xl bg-sky-50 border border-sky-100 text-xs text-sky-900">
-          <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> การศึกษาต่อในระดับอุดมศึกษาสาขาธุรกิจการบินอาจมีค่าใช้จ่ายค่อนข้างสูง จึงควรวางแผนล่วงหน้าเกี่ยวกับการทุนการศึกษาหรือการกู้ยืมเพื่อการศึกษา (กยศ.)
-        </div>
+        <div class="p-4 rounded-2xl bg-sky-50 border border-sky-100 text-xs text-sky-900"><strong>ข้อควรระวัง:</strong> ควรเตรียมทักษะภาษาอังกฤษพื้นฐานและสมรรถภาพร่างกาย ค่าใช้จ่ายระดับมหาวิทยาลัยอาจสูง ควรศึกษาทุนหรือทางเลือกสนับสนุน และพัฒนาทักษะบริการที่นำไปปรับใช้กับอาชีพอื่นได้หากอุตสาหกรรมการบินเปลี่ยนแปลง</div>
       </div>
     </div>
 
     <!-- Modal: ห้อง 8 -->
-    <div id="modal-h8" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h8" data-plan="h8" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-xs font-bold">ห้อง 8</span>
-          <h3 class="text-xl font-bold text-purple-950 mt-1">เตรียมนิติศาสตร์</h3>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-xs font-bold">ห้อง 8</span>
+          <h3 class="text-xl font-bold text-purple-950 mt-1">เตรียมนิติศาสตร์ - รัฐศาสตร์</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> ปูพื้นฐานวิชากฎหมายอย่างเข้มข้น ครอบคลุมกฎหมายแพ่ง-อาญา นิติปรัชญา ประวัติศาสตร์กฎหมาย และอาชญาวิทยา ช่วยลดระยะเวลาในการปรับตัวเมื่อเข้าศึกษาในระดับมหาวิทยาลัย</p>
-        <p><strong>ข้อเข้าใจผิด:</strong> ไม่ได้จำกัดสายงานเฉพาะทนายความ อัยการ หรือผู้พิพากษาเท่านั้น แต่สามารถต่อยอดไปยังคณะรัฐศาสตร์ สังคมสงเคราะห์ศาสตร์ งานข้าราชการพลเรือน ตำรวจ หรือทหารได้อย่างกว้างขวาง</p>
-        <p><strong>ผู้ที่เหมาะสม:</strong> เปิดกว้าง กล้าคิด กล้าแสดงความคิดเห็น มีเหตุผล และชอบวิเคราะห์เพื่อหาข้อสรุปที่ถูกต้องตามหลักการ</p>
-        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาสังคมศึกษา 2.5 ขึ้นไป / รายวิชาภาษาไทย 2.5 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป</p>
-        <div class="p-4 rounded-2xl bg-rose-50 border border-rose-100 text-xs text-rose-900">
-          <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> นักเรียนที่คุ้นเคยกับการสอบแบบเลือกตอบ (ปรนัย) อาจต้องปรับตัวมากเป็นพิเศษกับการสอบรูปแบบการเขียนบรรยายวิเคราะห์
-        </div>
+        <p><strong>จุดเด่นสำคัญ:</strong> เตรียมความพร้อมตรงสายด้วยวิชากฎหมายและสังคมศาสตร์ที่ลึกขึ้น เช่น กฎหมายแพ่ง อาญา นิติปรัชญา ประวัติศาสตร์กฎหมาย และอาชญาวิทยา</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> ไม่ได้มีเส้นทางอาชีพเพียงทนาย อัยการ หรือผู้พิพากษา ยังต่อยอดสู่อีกหลายคณะและอาชีพได้</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> เปิดกว้าง กล้าคิด กล้าพูดและแสดงความคิดเห็น มีเหตุผล และพร้อมฝึกสื่อสารกับการเขียนวิเคราะห์</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> นิติศาสตร์ รัฐศาสตร์ รัฐประศาสนศาสตร์ ตำรวจ อัยการ และงานบริหารส่วนท้องถิ่น</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> เกรดเฉลี่ยกลุ่มสังคมศึกษา ≥ 2.50, ภาษาไทย ≥ 2.50 และภาษาอังกฤษ ≥ 2.00</p>
+        <div class="p-4 rounded-2xl bg-rose-50 border border-rose-100 text-xs text-rose-900"><strong>ข้อควรระวัง:</strong> การเรียนและการสอบเน้นข้อเขียน คิด พูด และเขียนวิเคราะห์ ต่างจากการท่องจำและข้อสอบปรนัย ควรเตรียมตัวตั้งแต่ ม.3 ฝึกคิดวิเคราะห์ สื่อสาร และตอบคำถาม พร้อมสำรวจอาชีพในสายนี้ให้กว้างกว่าตำแหน่งที่คุ้นเคย</div>
       </div>
     </div>
 
     <!-- Modal: ห้อง 9 -->
-    <div id="modal-h9" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h9" data-plan="h9" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold">ห้อง 9</span>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold">ห้อง 9</span>
           <h3 class="text-xl font-bold text-purple-950 mt-1">ภาษาอังกฤษ - ภาษาญี่ปุ่น</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> เป็นสายงานที่ตลาดยังมีความต้องการสูง มีโอกาสต่อยอดทางอาชีพหลากหลาย มีกิจกรรมค่ายภาษา การติวสอบวัดระดับภาษาญี่ปุ่น (JLPT) และการเรียนรู้กับวิทยากรเจ้าของภาษาโดยตรง</p>
-        <p><strong>รูปแบบการสอน:</strong> เริ่มสอนตั้งแต่พื้นฐานภาษาญี่ปุ่น ไม่จำเป็นต้องมีประสบการณ์มาก่อน (แนะนำให้ฝึกท่องจำตัวอักษรพื้นฐานล่วงหน้า)</p>
-        <p><strong>ผู้ที่เหมาะสม:</strong> รักการสื่อสาร กล้าแสดงออก ชื่นชอบวัฒนธรรมต่างประเทศ และมีความจำดีเพื่อรองรับการจำตัวอักษรและไวยากรณ์</p>
-        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาภาษาไทย 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป / รายวิชาสังคมศึกษา 2.0 ขึ้นไป</p>
-        <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-100 text-xs text-indigo-900">
-          <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> ไวยากรณ์ภาษาญี่ปุ่นมีโครงสร้างแตกต่างจากภาษาไทยอย่างมาก และผู้เรียนจำเป็นต้องพัฒนาทักษะเฉพาะตัวควบคู่กับการใช้เทคโนโลยีช่วยแปลภาษาในปัจจุบัน
-        </div>
+        <p><strong>จุดเด่นสำคัญ:</strong> มีกิจกรรมค่ายภาษา ติวสอบวัดระดับ และวิทยากรชาวญี่ปุ่น เริ่มเรียนจากพื้นฐานและสามารถเตรียมสอบ JLPT ได้</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> ไม่จำเป็นต้องมีพื้นฐานภาษาญี่ปุ่น เริ่มเรียนตั้งแต่ต้นได้ แต่การฝึกพูดและพบโอกาสใช้ภาษาจริงเป็นสิ่งสำคัญ</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> ชอบสื่อสาร กล้าแสดงออก สนใจวัฒนธรรมต่างประเทศ และพร้อมฝึกจำตัวอักษรกับคำศัพท์</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> อักษรศาสตร์ มนุษยศาสตร์ ล่าม นักแปล พนักงานบริษัทญี่ปุ่น งานสนามบิน และติวเตอร์</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> เกรดเฉลี่ยกลุ่มภาษาไทย ≥ 2.00, ภาษาอังกฤษ ≥ 2.00 และสังคมศึกษา ≥ 2.00</p>
+        <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-100 text-xs text-indigo-900"><strong>ข้อควรระวัง:</strong> ต้องฝึกจำตัวอักษรและคำศัพท์ ไวยากรณ์ต่างจากภาษาไทย และควรหาโอกาสฝึกพูดจริง ขณะเดียวกันควรพัฒนาทักษะที่ใช้ร่วมกับเทคโนโลยีเพื่อรับมือกับเครื่องมือแปลภาษา</div>
       </div>
     </div>
 
     <!-- Modal: ห้อง 10 -->
-    <div id="modal-h10" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h10" data-plan="h10" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-red-100 text-red-800 text-xs font-bold">ห้อง 10</span>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-red-100 text-red-800 text-xs font-bold">ห้อง 10</span>
           <h3 class="text-xl font-bold text-purple-950 mt-1">ภาษาอังกฤษ - ภาษาจีน</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> เรียนภาษาจีนเข้มข้น 6 คาบ/สัปดาห์ (3 หน่วยกิต) ครอบคลุมทั้งทักษะการฟัง พูด อ่าน เขียน และแปล มีทัศนศึกษา โครงการค่ายศึกษาต่อประเทศจีน และกิจกรรมส่งเสริมวัฒนธรรม เช่น การชงชาและการเขียนพู่กันจีนประจำปี</p>
-        <p><strong>การปูพื้นฐาน:</strong> เริ่มสอนตั้งแต่ระดับพื้นฐาน เน้นระบบออกเสียง **"พินอิน"** ให้แน่นในชั้น ม.4 ก่อนยกระดับคลังคำศัพท์และไวยากรณ์ในชั้น ม.5 และ ม.6</p>
-        <p><strong>ผู้ที่เหมาะสม:</strong> สนใจด้านภาษา มีความจำดี (เนื่องจากต้องจดจำอักษรจีนมากกว่า 3,000 คำ) และกล้าเปิดรับการสื่อสาร</p>
-        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> รายวิชาภาษาไทย 2.0 ขึ้นไป / รายวิชาภาษาอังกฤษ 2.0 ขึ้นไป / รายวิชาสังคมศึกษา 2.0 ขึ้นไป</p>
-        <div class="p-4 rounded-2xl bg-red-50 border border-red-100 text-xs text-red-900">
-          <strong>ข้อควรรู้ & ข้อควรระวัง:</strong> อาจเกิดความท้อแท้จากการท่องจำตัวอักษรจีนที่มีจำนวนมาก ต้องอาศัยความขยัน หมั่นฝึกซ้อมออกเสียงพินอิน และทบทวนคำศัพท์อย่างสม่ำเสมอ
-        </div>
+        <p><strong>จุดเด่นสำคัญ:</strong> เรียนภาษาจีน 6 คาบต่อสัปดาห์ ครบฟัง พูด อ่าน เขียน และแปล มีกิจกรรมทัศนศึกษาและค่ายภาษาในประเทศจีน รวมถึงแนะแนวเรียนต่อ เนื้อหาครอบคลุมภาษาและวัฒนธรรม เช่น ภูมิศาสตร์ วิถีชีวิต อาหาร การแต่งกาย และประเพณี</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> เริ่มเรียนจากพื้นฐาน ปีแรกค่อย ๆ สร้างคลังคำศัพท์ และให้ความสำคัญกับพินอินก่อนต่อยอดระดับ ม.5–ม.6 ไม่จำเป็นต้องเก่งมาก่อน</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> ชอบภาษา มีความจำดี และกล้าแสดงออก กล้าพูดและสื่อสาร การฝึกใช้ภาษาจริงช่วยให้ความรู้เกิดประโยชน์</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> อักษรศาสตร์ มนุษยศาสตร์ ศิลปศาสตร์ นิเทศศาสตร์ที่เลือกภาษาจีนเป็นวิชาโท หรือเรียนต่อที่จีน รวมถึงงานสายการบิน โรงแรม เลขานุการ ล่าม นักแปล มัคคุเทศก์ ครูสอนภาษา งานประสานงานไทย-จีน และงานความสัมพันธ์ระหว่างประเทศ</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> เกรดเฉลี่ยกลุ่มภาษาไทย ≥ 2.00, ภาษาอังกฤษ ≥ 2.00 และสังคมศึกษา ≥ 2.00</p>
+        <div class="p-4 rounded-2xl bg-red-50 border border-red-100 text-xs text-red-900"><strong>ข้อควรระวัง:</strong> ควรเตรียมพินอินให้แน่น ฝึกฟังและออกเสียง รวมถึงทบทวนตัวอักษรและคำศัพท์ที่เพิ่มขึ้นตามระดับชั้น ผู้เรียนอาจท้อได้หากไม่แบ่งเวลาฝึกอย่างสม่ำเสมอ</div>
       </div>
     </div>
 
     <!-- Modal: ห้อง 11 -->
-    <div id="modal-h11" class="modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
+    <div id="modal-h11" data-plan="h11" class="plan-modal modal-content hidden bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-xl border border-pink-100">
       <div class="flex justify-between items-start border-b border-gray-100 pb-4">
         <div>
-          <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 11</span>
+          <span class="plan-number px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">ห้อง 11</span>
           <h3 class="text-xl font-bold text-purple-950 mt-1">สปอร์ต-อาร์ต-มิวสิก (SAM)</h3>
         </div>
         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
       </div>
       <div class="space-y-4 text-sm text-purple-900/80 leading-[1.7]">
-        <p><strong>จุดเด่นสำคัญ:</strong> ส่งเสริมและพัฒนาอัจฉริยภาพด้านกีฬา ศิลปะ และดนตรีอย่างเต็มศักยภาพ มุ่งเน้นการฝึกทักษะเฉพาะทางควบคู่ไปกับวิชาการพื้นฐาน</p>
-        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> เกรดเฉลี่ยรวมสะสม (GPAX) 5 ภาคเรียน 2.0 ขึ้นไป</p>
+        <p><strong>จุดเด่นสำคัญ:</strong> เปิดโอกาสให้พัฒนาความสามารถกีฬา ศิลปะ และดนตรี มีวิชาเพิ่มเติมเรื่องกติกากีฬา ทักษะการออกกำลังกาย และวิชาเฉพาะด้านศิลปะกับดนตรี</p>
+        <p><strong>ข้อเข้าใจผิด:</strong> ไม่ใช่ห้องสำหรับนักเรียนที่เรียนไม่เก่งหรือเกเร แต่เป็นแผนที่สนับสนุนความสามารถเฉพาะทางและทักษะชีวิต</p>
+        <p><strong>ผู้ที่เหมาะสม:</strong> ชอบกีฬา ศิลปะ หรือดนตรี มีมนุษยสัมพันธ์และความรับผิดชอบ พร้อมฝึกสมรรถภาพและทักษะเฉพาะทางเพื่อสมัครหรือคัดเลือก</p>
+        <p><strong>เส้นทางสู่อนาคต:</strong> พลศึกษา วิทยาศาสตร์การกีฬา กายภาพบำบัด งานโค้ช ผู้นำการออกกำลังกาย ศิลปกรรมศาสตร์ ดุริยางคศาสตร์ และการใช้โควต้านักกีฬาเพื่อศึกษาต่อ ตามเกณฑ์ของแต่ละสถาบัน</p>
+        <p><strong>คุณสมบัติเกรดยื่นโควต้า:</strong> เกรดเฉลี่ยสะสม (GPAX 5 เทอม) ≥ 2.00</p>
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100 text-xs text-amber-900"><strong>ข้อควรระวัง:</strong> ผู้ที่ไม่มีพื้นฐานจาก ม.ต้น อาจต้องใช้เวลาปรับตัว ควรฝึกต่อเนื่องและรับผิดชอบต่อการเรียน ขณะเดียวกันสถานที่และพื้นที่ฝึกเฉพาะทางของโรงเรียนอาจมีข้อจำกัด</div>
       </div>
     </div>
 
@@ -810,17 +865,13 @@
 
   <!-- ==================== JAVASCRIPT ==================== -->
   <script>
-    // สคริปต์สกรอลล์ราบรื่น (Smooth Scroll)
-    document.querySelectorAll('a[href^="#"]').forEach((ลิงก์) => {
-      ลิงก์.addEventListener("click", (เหตุการณ์) => {
-        เหตุการณ์.preventDefault();
-
-        const เป้าหมาย = document.querySelector(
-          ลิงก์.getAttribute("href")
-        );
-
-        if (เป้าหมาย) {
-          เป้าหมาย.scrollIntoView({
+    // สคริปต์ Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({
             behavior: "smooth",
             block: "start"
           });
@@ -833,16 +884,16 @@
       document.getElementById('modal-container').classList.remove('hidden');
       document.querySelectorAll('.modal-content').forEach(el => el.classList.add('hidden'));
       document.getElementById(modalId).classList.remove('hidden');
-      document.body.style.overflow = 'hidden'; // ป้องกันการสกรอลล์ด้านหลัง
+      document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
       document.getElementById('modal-container').classList.add('hidden');
       document.querySelectorAll('.modal-content').forEach(el => el.classList.add('hidden'));
-      document.body.style.overflow = 'auto'; // คืนค่าสกรอลล์
+      document.body.style.overflow = 'auto';
     }
 
-    // ปิด Modal เมื่อคลิกพื้นที่ภายนอก
+    // ปิด Modal เมื่อคลิกนอกพื้นที่ Pop-up
     document.getElementById('modal-container').addEventListener('click', function(e) {
       if (e.target === this) {
         closeModal();
